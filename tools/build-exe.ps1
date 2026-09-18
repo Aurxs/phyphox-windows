@@ -14,7 +14,7 @@ try {
   $portable = Join-Path $staging 'phyphox-windows-win-x64'
   New-Item -ItemType Directory -Path $portable -Force | Out-Null
   & (Join-Path $PSScriptRoot 'publish-windows.ps1') -Output $portable
-  foreach ($file in @('Phyphox.Server.exe', 'wwwroot/index.html', 'start-phyphox.cmd', 'LICENSE', 'manifest.json')) {
+  foreach ($file in @('phyphox.exe', 'app/Phyphox.Server.dll', 'app/wwwroot/index.html', 'app/LICENSE', 'app/manifest.json')) {
     if (!(Test-Path (Join-Path $portable $file) -PathType Leaf)) { throw "Package is missing $file" }
   }
   # Build in a fresh directory so previous portable data and stale binaries are never packaged.
@@ -26,7 +26,7 @@ try {
   "$hash  $([IO.Path]::GetFileName($archive))" | Set-Content "$archive.sha256" -Encoding ASCII
   Write-Host "Package: $archive"
   Write-Host "SHA256:  $archive.sha256"
-  Write-Host 'Extract the complete ZIP and run start-phyphox.cmd.'
+  Write-Host 'Extract the complete ZIP and double-click phyphox.exe.'
 } finally {
   if ($staging -and (Test-Path $staging)) { Remove-Item $staging -Recurse -Force }
   Pop-Location

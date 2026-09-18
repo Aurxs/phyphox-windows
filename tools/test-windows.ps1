@@ -20,7 +20,7 @@ $report = [ordered]@{
 }
 $process = $null
 try {
-  $executable = Join-Path $ProgramDirectory 'Phyphox.Server.exe'
+  $executable = Join-Path $ProgramDirectory 'phyphox.exe'
   if (!(Test-Path $executable)) { throw 'Portable server executable missing.' }
   $arguments = @('--headless', '--port', "$Port")
   if (!$UsePortableData) { $arguments += @('--data-dir', ('"' + $runDirectory + '"')) }
@@ -33,7 +33,7 @@ try {
   }
   if (!$health) { throw 'Server did not become healthy.' }
   $report.health = $health
-  $report.serverAssemblySha256 = (Get-FileHash (Join-Path $ProgramDirectory 'Phyphox.Server.dll') -Algorithm SHA256).Hash
+  $report.serverAssemblySha256 = (Get-FileHash (Join-Path $ProgramDirectory 'app/Phyphox.Server.dll') -Algorithm SHA256).Hash
   $report.checks += 'self-contained startup'
   $page = Invoke-WebRequest "$url/" -UseBasicParsing
   if ($page.StatusCode -ne 200 -or $page.Content -notmatch '<div id="root">') { throw 'Browser entry unavailable.' }

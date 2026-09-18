@@ -28,7 +28,7 @@ GitHub 上使用 **Actions → Build Windows EXE → Run workflow** 手动打包
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\test-windows.ps1 -ProgramDirectory .\artifacts\win-x64 -ReportPath .\artifacts\windows-check.json
 ```
 
-发布脚本只生成文件夹，不注册服务、不安装驱动。运行包双击 `Phyphox.Server.exe`，会显示任务栏后端窗口并在服务就绪后打开默认浏览器；关闭窗口会停止服务。`start-phyphox.cmd` 兼容启动该窗口。Windows 发布包含 WinForms 所需运行时，SDK 只用于构建。自动化使用 `--headless` 禁用窗口及浏览器；`--no-browser` 保留窗口但不自动打开浏览器。CI 使用 `tools/test-desktop.ps1` 检查窗口、后端启动及关窗退出。
+发布脚本只生成文件夹，不注册服务、不安装驱动。运行包双击 `phyphox.exe`，会显示任务栏后端窗口并在服务就绪后打开默认浏览器；关闭窗口会停止服务。根目录仅保留启动 EXE、简明说明和可选指南，其余运行时、网页、实验资源、许可与文档放在 `app/`；默认数据保存在根目录 `data/`。Windows 发布包含 WinForms 所需运行时，SDK 只用于构建。自动化使用 `--headless` 禁用窗口及浏览器；`--no-browser` 保留窗口但不自动打开浏览器。CI 使用 `tools/test-desktop.ps1` 检查窗口、后端启动及关窗退出。
 
 ## 跨平台开发与定向检查
 
@@ -49,8 +49,8 @@ dotnet run --project tests/Phyphox.Network.Tests -- ../official-reference/phypho
 dotnet publish src/Phyphox.Server -c Release -r win-x64 --self-contained true -p:RuntimeIdentifier=win-x64 -m:1 -nr:false -p:UseSharedCompilation=false -o artifacts/win-x64
 ```
 
-还需按publish-windows.ps1复制启动脚本、许可和文档并生成manifest。相机仅使用MSMF，应移除发布目录中的可选`opencv_videoio_ffmpeg*.dll`插件；交叉编译成功不证明原生DLL能在Windows加载。
+上述直接发布命令输出开发布局。面向用户的目录布局应使用 publish-windows.ps1：发布到 app/，通过 PortableLauncherPath 生成根目录 phyphox.exe，复制许可和文档并生成 app/manifest.json（路径相对便携包根目录）。相机仅使用MSMF，应移除发布目录中的可选`opencv_videoio_ffmpeg*.dll`插件；交叉编译成功不证明原生DLL能在Windows加载。
 
 `.github/workflows/windows.yml`是可选择使用的CI配置，当前没有上传或在GitHub执行。Windows Server CI也不能替代Win10/Win11实机与BLE/USB验收。
 
-源码包包括src、web源码和lockfile、tests、tools、assets、许可和文档；不把node_modules/bin/obj/用户测量数据当对应源码分发。发布包的文件校验值记录在manifest.json。
+源码包包括src、web源码和lockfile、tests、tools、assets、许可和文档；不把node_modules/bin/obj/用户测量数据当对应源码分发。发布包的文件校验值记录在 app/manifest.json。

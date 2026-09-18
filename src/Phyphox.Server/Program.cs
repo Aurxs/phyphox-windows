@@ -33,7 +33,14 @@ public static class Program
     internal static async Task RunServerAsync(string[] args, Action<string, string>? ready = null, CancellationToken stopping = default)
     {
         string? Option(string name) { var i = Array.IndexOf(args, name); return i >= 0 && i + 1 < args.Length ? args[i + 1] : null; }
-        var dataRoot = Path.GetFullPath(Option("--data-dir") ?? Path.Combine(AppContext.BaseDirectory, "data"));
+        var portableRoot = AppContext.BaseDirectory;
+#if WINDOWS
+        // The user-facing launcher lives above app/. Keep measurements beside
+        // that EXE, while web assets and runtime files remain in app/.
+        if (Environment.ProcessPath is { } executable && Path.GetFileName(executable).Equals("phyphox.exe", StringComparison.OrdinalIgnoreCase))
+            portableRoot = Path.GetDirectoryName(executable)!;
+#endif
+        var dataRoot = Path.GetFullPath(Option("--data-dir") ?? Path.Combine(portableRoot, "data"));
         var assetRoot = Path.GetFullPath(Option("--assets") ?? Path.Combine(AppContext.BaseDirectory, "assets"));
         var port = int.TryParse(Option("--port"), out var parsed) ? parsed : 0;
         if (port is < 0 or > 65535) throw new ArgumentException("端口必须在 0..65535 之间。");

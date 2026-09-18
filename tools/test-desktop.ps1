@@ -1,10 +1,18 @@
 param([Parameter(Mandatory=$true)][string]$ProgramDirectory, [int]$Port = 37655)
 $ErrorActionPreference = 'Stop'
-$executable = Join-Path (Resolve-Path $ProgramDirectory).Path 'Phyphox.Server.exe'
-$data = Join-Path $env:TEMP ('phyphox-desktop-' + [Guid]::NewGuid().ToString('N'))
+$source = (Resolve-Path $ProgramDirectory).Path
+if (@(Get-ChildItem $source -Filter '*.exe').Count -ne 1 -or @(Get-ChildItem $source -Filter '*.dll').Count -ne 0) {
+  throw 'Portable root must contain one launcher EXE and no runtime DLLs.'
+}
+$temporaryRoot = Join-Path $env:TEMP ('phyphox-desktop-' + [Guid]::NewGuid().ToString('N'))
+$portable = Join-Path $temporaryRoot 'portable moved'
+$data = Join-Path $portable 'data'
 $process = $null
 try {
-  $process = Start-Process $executable -ArgumentList @('--no-browser', '--port', "$Port", '--data-dir', ('"' + $data + '"')) -PassThru
+  New-Item -ItemType Directory -Path $temporaryRoot | Out-Null
+  Copy-Item -LiteralPath $source -Destination $portable -Recurse
+  $executable = Join-Path $portable 'phyphox.exe'
+  $process = Start-Process $executable -WorkingDirectory $env:WINDIR -ArgumentList @('--no-browser', '--port', "$Port") -PassThru
   $ready = $false
   for ($i = 0; $i -lt 60; $i++) {
     $process.Refresh()
@@ -22,8 +30,8 @@ try {
   # A clean shutdown must release the portable data lock.
   $lock = [IO.File]::Open((Join-Path $data '.service.lock'), 'Open', 'ReadWrite', 'None')
   $lock.Dispose()
-  Write-Host 'Desktop window, backend startup, close-to-stop and data-lock release passed.'
+  Write-Host 'Clean portable layout, relocated desktop startup, close-to-stop and default data-lock release passed.'
 } finally {
   if ($process -and !$process.HasExited) { Stop-Process -Id $process.Id -Force }
-  if (Test-Path $data) { Remove-Item $data -Recurse -Force }
+  if (Test-Path $temporaryRoot) { Remove-Item $temporaryRoot -Recurse -Force }
 }

@@ -27,4 +27,14 @@
     <!-- These three notices are already contributed by the Media/Camera projects. -->
     <Content Include="../../licenses/**/*" Exclude="../../licenses/NAudio-LICENSE.txt;../../licenses/OpenCV-LICENSE.txt;../../licenses/OpenCvSharp-LICENSE.txt" Link="licenses/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
+  <!-- Bind a small native launcher to the managed application in app/, so
+       portable users see one EXE instead of the runtime's implementation files. -->
+  <Target Name="CreatePortableLauncher" AfterTargets="Publish"
+          Condition="'$(PortableLauncherPath)' != '' and '$(RuntimeIdentifier)' == 'win-x64'">
+    <CreateAppHost AppHostSourcePath="$(AppHostSourcePath)"
+                   AppHostDestinationPath="$(PortableLauncherPath)"
+                   AppBinaryName="app/$(AssemblyName).dll"
+                   IntermediateAssembly="$(TargetPath)"
+                   WindowsGraphicalUserInterface="true" />
+  </Target>
 </Project>
