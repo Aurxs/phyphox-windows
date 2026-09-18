@@ -22,7 +22,7 @@ $process = $null
 try {
   $executable = Join-Path $ProgramDirectory 'Phyphox.Server.exe'
   if (!(Test-Path $executable)) { throw 'Portable server executable missing.' }
-  $arguments = @('--port', "$Port")
+  $arguments = @('--headless', '--port', "$Port")
   if (!$UsePortableData) { $arguments += @('--data-dir', ('"' + $runDirectory + '"')) }
   $process = Start-Process -FilePath $executable -WorkingDirectory $env:WINDIR -ArgumentList $arguments -PassThru -WindowStyle Hidden -RedirectStandardOutput (Join-Path $runDirectory 'stdout.log') -RedirectStandardError (Join-Path $runDirectory 'stderr.log')
   $url = "http://127.0.0.1:$Port"

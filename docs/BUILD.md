@@ -28,7 +28,7 @@ GitHub 上使用 **Actions → Build Windows EXE → Run workflow** 手动打包
 powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\test-windows.ps1 -ProgramDirectory .\artifacts\win-x64 -ReportPath .\artifacts\windows-check.json
 ```
 
-发布脚本只生成文件夹，不注册服务、不安装驱动。运行包使用`start-phyphox.cmd`。SDK只用于构建，不是最终用户的依赖。
+发布脚本只生成文件夹，不注册服务、不安装驱动。运行包双击 `Phyphox.Server.exe`，会显示任务栏后端窗口并在服务就绪后打开默认浏览器；关闭窗口会停止服务。`start-phyphox.cmd` 兼容启动该窗口。Windows 发布包含 WinForms 所需运行时，SDK 只用于构建。自动化使用 `--headless` 禁用窗口及浏览器；`--no-browser` 保留窗口但不自动打开浏览器。CI 使用 `tools/test-desktop.ps1` 检查窗口、后端启动及关窗退出。
 
 ## 跨平台开发与定向检查
 

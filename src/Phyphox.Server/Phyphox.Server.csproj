@@ -3,9 +3,15 @@
     <TargetFramework>net10.0</TargetFramework>
     <TargetFramework Condition="$([System.String]::Copy('$(RuntimeIdentifier)').StartsWith('win-'))">net10.0-windows10.0.19041.0</TargetFramework>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <UseWindowsForms Condition="$([System.String]::Copy('$(RuntimeIdentifier)').StartsWith('win-'))">true</UseWindowsForms>
+    <OutputType Condition="$([System.String]::Copy('$(RuntimeIdentifier)').StartsWith('win-'))">WinExe</OutputType>
     <AssemblyName>Phyphox.Server</AssemblyName>
     <RootNamespace>Phyphox.Server</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="../Phyphox.Core/Phyphox.Core.csproj" />
     <ProjectReference Include="../Phyphox.Devices/Phyphox.Devices.csproj" />

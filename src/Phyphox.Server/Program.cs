@@ -16,7 +16,21 @@ public static class Program
         NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals,
         Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
     };
-    public static async Task Main(string[] args)
+    [STAThread]
+    public static void Main(string[] args)
+    {
+#if WINDOWS
+        if (!args.Contains("--headless"))
+        {
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+            System.Windows.Forms.Application.Run(new DesktopWindow(args));
+            return;
+        }
+#endif
+        RunServerAsync(args).GetAwaiter().GetResult();
+    }
+    internal static async Task RunServerAsync(string[] args, Action<string, string>? ready = null, CancellationToken stopping = default)
     {
         string? Option(string name) { var i = Array.IndexOf(args, name); return i >= 0 && i + 1 < args.Length ? args[i + 1] : null; }
         var dataRoot = Path.GetFullPath(Option("--data-dir") ?? Path.Combine(AppContext.BaseDirectory, "data"));
@@ -36,7 +50,7 @@ public static class Program
         var session = new SessionService(library, dataRoot, deviceManager);
         builder.Services.AddSingleton(library); builder.Services.AddSingleton(session); builder.Services.AddHostedService(_ => session);
         builder.Services.AddSingleton(deviceManager);
-        var app = builder.Build();
+        await using var app = builder.Build();
         var token = Convert.ToHexString(RandomNumberGenerator.GetBytes(32));
         app.Use(async (context, next) =>
         {
@@ -106,11 +120,11 @@ public static class Program
         app.UseDefaultFiles(); app.UseStaticFiles();
         app.Map("/api/{**path}", () => Results.NotFound(new { error = "接口不存在。" }));
         app.MapFallbackToFile("index.html");
-        await app.StartAsync();
+        await app.StartAsync(stopping);
         var addresses = app.Services.GetRequiredService<IServer>().Features.Get<IServerAddressesFeature>()!.Addresses;
         Console.WriteLine("\nphyphox Windows 实验工作台（开发版本）\n" + string.Join('\n', addresses.Select(a => "浏览器打开：" + a)) + "\n数据目录：" + dataRoot + "\nCtrl+C 停止服务。设备和 Windows 真机验收尚未执行。\n");
-        await app.WaitForShutdownAsync();
-        await app.DisposeAsync();
+        ready?.Invoke(addresses.First(), dataRoot);
+        await app.WaitForShutdownAsync(stopping);
     }
     public sealed record LoadRequest(string Id);
 }

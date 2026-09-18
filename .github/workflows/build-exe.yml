@@ -10,6 +10,7 @@ on:
       - 'tools/build-exe.ps1'
       - 'tools/publish-windows.ps1'
       - 'build-exe.cmd'
+      - 'src/Phyphox.Server/**'
 
 permissions:
   contents: read
