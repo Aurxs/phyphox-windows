@@ -4,6 +4,12 @@ on:
   workflow_dispatch:
   push:
     tags: ['v*']
+  pull_request:
+    paths:
+      - '.github/workflows/build-exe.yml'
+      - 'tools/build-exe.ps1'
+      - 'tools/publish-windows.ps1'
+      - 'build-exe.cmd'
 
 permissions:
   contents: read

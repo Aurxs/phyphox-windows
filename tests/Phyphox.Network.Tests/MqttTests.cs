@@ -63,8 +63,9 @@ internal static class MqttTests
         // Windows Schannel cannot use an ephemeral RSA key for the TLS server.
         // A PFX import creates a user key container, removed when leaf is disposed
         // (do not use PersistKeySet). Other platforms keep the key ephemeral.
-        using var leaf=X509CertificateLoader.LoadPkcs12(ephemeralLeaf.Export(X509ContentType.Pkcs12),null,
-            OperatingSystem.IsWindows()?X509KeyStorageFlags.UserKeySet:X509KeyStorageFlags.EphemeralKeySet);
+        using var leaf=OperatingSystem.IsWindows()
+            ?X509CertificateLoader.LoadPkcs12(ephemeralLeaf.Export(X509ContentType.Pkcs12),null,X509KeyStorageFlags.UserKeySet)
+            :signed.CopyWithPrivateKey(serverKey);
         var tlsPort=Port();using var tlsServer=factory.CreateMqttServer(new MqttServerOptionsBuilder().WithoutDefaultEndpoint().WithEncryptedEndpoint().WithEncryptedEndpointPort(tlsPort).WithEncryptedEndpointBoundIPAddress(IPAddress.Loopback).WithEncryptedEndpointBoundIPV6Address(IPAddress.IPv6Loopback).WithEncryptionCertificate(leaf).Build());
         tlsServer.ValidatingConnectionAsync+=e=> { if(e.UserName!="fixture"||e.Password!="fixture-pass")e.ReasonCode=MqttConnectReasonCode.BadUserNameOrPassword;return Task.CompletedTask; };
         await tlsServer.StartAsync();
