@@ -1,0 +1,125 @@
+{
+  "note": "CsWinRT and Intel ITT LICENSE downloaded from master then HEAD resolved on the same day; pinned commits identify license text source, not proven exact binary source. ITT notice extracts header comment. SDK alias is mutable. Archive hash verified.",
+  "sources": [
+    {
+      "file": "zlib-1.3.1-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/madler/zlib/v1.3.1/LICENSE",
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+    },
+    {
+      "file": "libjpeg-turbo-3.1.3-LICENSE.md",
+      "url": "https://raw.githubusercontent.com/libjpeg-turbo/libjpeg-turbo/3.1.3/LICENSE.md",
+      "sha256": "2189dc45a8fe96204069f8124caa53a148dfdc193f50f584c6ca7849a6072872"
+    },
+    {
+      "file": "libjpeg-turbo-3.1.3-README.ijg",
+      "url": "https://raw.githubusercontent.com/libjpeg-turbo/libjpeg-turbo/3.1.3/README.ijg",
+      "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6"
+    },
+    {
+      "file": "libpng-1.6.55-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/pnggroup/libpng/v1.6.55/LICENSE",
+      "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+    },
+    {
+      "file": "libtiff-4.7.1-LICENSE.md",
+      "url": "https://gitlab.com/libtiff/libtiff/-/raw/v4.7.1/LICENSE.md",
+      "sha256": "0e27c2382d7b8147972bbb746e04059a1152c8d0fda9d03ef1399d1a433c4ade"
+    },
+    {
+      "file": "OpenJPEG-2.5.3-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/uclouvain/openjpeg/v2.5.3/LICENSE",
+      "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6"
+    },
+    {
+      "file": "libwebp-1.6.0-COPYING.txt",
+      "url": "https://raw.githubusercontent.com/webmproject/libwebp/v1.6.0/COPYING",
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+    },
+    {
+      "file": "libwebp-1.6.0-PATENTS.txt",
+      "url": "https://raw.githubusercontent.com/webmproject/libwebp/v1.6.0/PATENTS",
+      "sha256": "cc3273e0694ea5896145e0677699b53471b03ea43021ddc50e7923fbb9f5023c"
+    },
+    {
+      "file": "OpenEXR-2.3.0-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/AcademySoftwareFoundation/openexr/v2.3.0/LICENSE",
+      "sha256": "2b2b83380132b61c62744edb3e5fa5b74c1cf40cd937528e80dffa21edbc3dda"
+    },
+    {
+      "file": "protobuf-3.19.1-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/protocolbuffers/protobuf/v3.19.1/LICENSE",
+      "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d"
+    },
+    {
+      "file": "IPP-OpenCV-4.13.0-download-source.txt",
+      "url": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/ippicv/ippicv.cmake",
+      "sha256": "e79afb3914e60e971380328b360d8d7ffb18292e9a90a220c5781064028a0d00"
+    },
+    {
+      "file": "CsWinRT-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/CsWinRT/d4649f92300aa3cb2dfd23a66074199488d85973/LICENSE",
+      "sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b"
+    },
+    {
+      "file": "ittnotify-BSD-3-Clause.txt",
+      "url": "https://raw.githubusercontent.com/intel/ittapi/bd72cfb15e34a5fc4c0a8d10f5bb5305d60e1eec/LICENSES/BSD-3-Clause.txt",
+      "sha256": "cf48cdd9ed87c2031b68fb1b9f4cfb55d00dcf815b21a30bf8304aa1e5e6f76a"
+    },
+    {
+      "file": "FFmpeg-OpenCV-LGPL21.txt",
+      "url": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/ffmpeg/license.txt",
+      "sha256": "1f9d4168b4a9a2bdd1851023735a41d0ab09ffa5fcc1a721a99ebc1d7d35a9c5"
+    },
+    {
+      "file": "FFmpeg-OpenCV-README.txt",
+      "url": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/ffmpeg/readme.txt",
+      "sha256": "26e4734e7ac1e72adac7a06a747ac9a997ee3714bc2ed8b745ff27dee35a2ad9"
+    },
+    {
+      "file": "WindowsSDK-LICENSE.rtf",
+      "url": "https://aka.ms/WinSDKLicenseURL",
+      "sha256": "dd07eb178e00c6bba4148457fc00ff77cd4887eb521d504186fe59c9ec8bbe62"
+    },
+    {
+      "file": "ittnotify-OpenCV-4.13.0-NOTICE.txt",
+      "url": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/ittnotify/include/ittnotify.h",
+      "sha256": "f2e3751ea56d22ae32d148b9903c3749ad7b6d2a3c315ca88e6bd85eec098742"
+    },
+    {
+      "file": "IPPICV-2022.2.0-EULA-readable.txt",
+      "url": "https://raw.githubusercontent.com/opencv/opencv_3rdparty/c934a2a15a6df020446ac3dfa07e3acf72b63a8f/ippicv/ippicv_2022.2.0_win_intel64_20250730_general.zip",
+      "archiveMd5": "7c0973976ab0716bc33f03a76a50017f",
+      "method": "Archive original except EULA-readable.txt is textutil conversion",
+      "sha256": "dca42c56bf35c228aa8fccb4a0fe42b98b34170877787e57a117d0fd58342480"
+    },
+    {
+      "file": "IPPICV-2022.2.0-ippicv_win_iw_readme.htm",
+      "url": "https://raw.githubusercontent.com/opencv/opencv_3rdparty/c934a2a15a6df020446ac3dfa07e3acf72b63a8f/ippicv/ippicv_2022.2.0_win_intel64_20250730_general.zip",
+      "archiveMd5": "7c0973976ab0716bc33f03a76a50017f",
+      "method": "Archive original except EULA-readable.txt is textutil conversion",
+      "sha256": "95af972835ee25ada9ef0374a628392bfa2e4ee173e9d0180cacaf759554825e"
+    },
+    {
+      "file": "IPPICV-2022.2.0-ippicv_win_icv_readme.htm",
+      "url": "https://raw.githubusercontent.com/opencv/opencv_3rdparty/c934a2a15a6df020446ac3dfa07e3acf72b63a8f/ippicv/ippicv_2022.2.0_win_intel64_20250730_general.zip",
+      "archiveMd5": "7c0973976ab0716bc33f03a76a50017f",
+      "method": "Archive original except EULA-readable.txt is textutil conversion",
+      "sha256": "2fbc6125275ebb4fe17dcbfdf987e8cac1694a15fd5d73aa8861b69015ae6ccf"
+    },
+    {
+      "file": "IPPICV-2022.2.0-ippicv_win_third-party-programs.txt",
+      "url": "https://raw.githubusercontent.com/opencv/opencv_3rdparty/c934a2a15a6df020446ac3dfa07e3acf72b63a8f/ippicv/ippicv_2022.2.0_win_intel64_20250730_general.zip",
+      "archiveMd5": "7c0973976ab0716bc33f03a76a50017f",
+      "method": "Archive original except EULA-readable.txt is textutil conversion",
+      "sha256": "a0a246b67784450f7a1b99b244d00cbdb8c001aa9b13755ababf4a218431703c"
+    },
+    {
+      "file": "IPPICV-2022.2.0-ippicv_win_EULA.rtf",
+      "url": "https://raw.githubusercontent.com/opencv/opencv_3rdparty/c934a2a15a6df020446ac3dfa07e3acf72b63a8f/ippicv/ippicv_2022.2.0_win_intel64_20250730_general.zip",
+      "archiveMd5": "7c0973976ab0716bc33f03a76a50017f",
+      "method": "Archive original except EULA-readable.txt is textutil conversion",
+      "sha256": "37f11c79f36fb5e1b00aca31c1234a7435c2929d83e181ee802a349ca8571749"
+    }
+  ]
+}

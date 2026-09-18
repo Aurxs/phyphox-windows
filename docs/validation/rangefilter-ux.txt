@@ -1,0 +1,6 @@
+Official source: phyphox-docs@3dcfdae14f3c3a957208c367a026a0589f6dd702
+Fixture: corpus/analysis/vectors/rangefilter/base.phyphox + unchanged base.expected.json
+Command: dotnet Phyphox.Core.Tests.dll ../official-reference/phyphox-docs/corpus/analysis/vectors/rangefilter --vectors-only
+Scope: one official vector, original expected values and tolerances. Repeated in slot creates two groups; first has inclusive min/max, second unbounded, shorter data produces NaN.
+Official golden vectors: passed=1, failed=0, explicitly blocked=0. Blocked is NOT passed.
+No full 117-vector run. The runner now supports --vectors-only to skip unrelated lifecycle fixtures whose relative paths assumed the full vector root.

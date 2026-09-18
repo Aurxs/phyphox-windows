@@ -1,0 +1,15 @@
+# Browser input bridge
+
+The user explicitly enables microphone/camera capture in the browser. Browser uploads real mono PCM or encoded sRGB camera frames to the loopback service. Analysis, experiment state, recording and export remain in the service; BLE/USB continue to use service adapters. Configuration is not proof that a physical device has passed acceptance.
+
+`POST /api/v1/session/media/browser/configure` binds `sessionId`, `inputIndex`, `kind` (`audio`/`camera`), actual `sampleRate`/`channels:1`, or actual `width`/`height`/`spectrumAxis`. It returns `{captureId,session,maximumFrameRate:10,timeoutSeconds:5}`. Inputs must exist in the current experiment; clients cannot choose arbitrary destination buffers. Snapshot `browserMedia` lists active bindings.
+
+`audio` accepts `{sessionId,captureId,sequence,sampleRate,samples}`. Sequences begin at zero and must be contiguous; each finite normalized mono batch is at most half a second. Rate must match configuration; when the experiment has no rate output, it must also match the requested experimental rate. No resampling is invented. Actual browser rate is client-reported: the service can validate consistency but cannot independently attest a microphone. No silent missing-batch interpolation occurs.
+
+`frame` accepts `{sessionId,captureId,sequence,mimeType,dataBase64,width,height}` with JPEG/PNG signature and dimensions checked before bounded decode. Maximum 1920×1080 / 2,073,600 pixels, 4,000,000 base64 characters. Frame sequences must increase. Frames arriving less than 100 ms apart are dropped with `accepted:false`; no stale-frame queue is retained. Service CPU analysis computes ROI luma/HSV and maps only the experiment's output slots. `t` is service reception time on the experiment axis, not exposure time. ICC conversion, physical exposure, fixed/manual exposure guarantees, calibrated luminance and spectroscopy remain unsupported and blocked.
+
+Uploads share one nonqueued processing slot. Concurrent requests receive HTTP 429; camera clients may count dropped frames, audio clients must stop on missing PCM. Request bodies are explicitly bounded even without Content-Length. All endpoints remain under the existing same-origin/loopback/token middleware.
+
+Configured, nonrunning streams may upload but data is discarded. Pause preserves tokens, pending input is discarded at the next start, and start resets a five-second first-data grace period. Missing real input for five seconds while running faults and stops acquisition. Stop, clear, load, restoration and fault cleanup invalidate stream tokens. `/stop` takes `{sessionId,captureId}` and stops the experiment rather than silently leaving it running without required input. Old-page uploads cannot target a new experiment instance, including reloading the same file.
+
+Focused fixture verification: `Phyphox.Storage.Tests --browser-media` covers armed/paused isolation, PCM mapping, sequence rejection, pause/resume, token invalidation, timeout stopping and PNG ROI decode. These checks do not claim microphone/camera hardware, browser permission behavior, timing accuracy or Windows acceptance.

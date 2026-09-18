@@ -1,0 +1,43 @@
+{
+  "scope": "UI copy only, isolated localhost:37654, no hardware permissions opened",
+  "sensors": [
+    {
+      "title": "加速度 (含 g)",
+      "inputNames": [
+        "加速度传感器（含重力 g）"
+      ],
+      "prompt": "开始前还需要\n需要加速度传感器（含重力 g），当前尚未接入。\n连接设备",
+      "promptVisible": true,
+      "startDisabled": true,
+      "unfriendly": false,
+      "screenshot": "sensor-friendly.png"
+    },
+    {
+      "title": "磁力计",
+      "inputNames": [
+        "磁场传感器（磁力计）"
+      ],
+      "prompt": "开始前还需要\n需要磁场传感器（磁力计），当前尚未接入。\n连接设备",
+      "promptVisible": true,
+      "startDisabled": true,
+      "unfriendly": false,
+      "screenshot": "copy-magnetometer.png"
+    }
+  ],
+  "media": {
+    "visibleText": "MEDIA DEVICES\n麦克风、摄像头与扬声器\n选择设备，启用后返回实验开始测量。\n麦克风与摄像头\n刷新设备\n停止实验并断开设备\n麦克风\n设备\n实验输入\n当前实验没有此类输入。\n授权并连接麦克风\n未连接\n高级信息\n摄像头\n设备\n实验输入\n当前实验没有此类输入。\n图像设置\n授权并连接摄像头\n未连接\n高级信息\n连接说明\n扬声器\n实验音频输出\n音量\n10\n%\n启用扬声器\n停止声音和实验\n开始实验后播放；隐藏网页会停止播放。\n高级信息\n高级：Windows 原生音频与相机接口",
+    "visibleCharacters": 207,
+    "openDetails": 0,
+    "details": 7,
+    "mediaCalls": {
+      "gum": 0,
+      "audioContexts": 0
+    },
+    "overflow": false,
+    "assets": [
+      "http://127.0.0.1:37654/assets/index-NUu8UNMX.js",
+      "http://127.0.0.1:37654/assets/index-CXoLl8iU.css"
+    ],
+    "method": "excludes closed-details descendants, hidden ancestors and zero-area text"
+  }
+}

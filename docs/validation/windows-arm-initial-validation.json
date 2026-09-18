@@ -1,0 +1,67 @@
+{
+    "timestamp":  "2026-09-18T11:44:07.7219985Z",
+    "os":  "Microsoft Windows NT 10.0.26200.0",
+    "osArchitecture":  "ARM64",
+    "powershellVersion":  "5.1.26100.8653",
+    "user":  "AURXS7353\\aurxs",
+    "elevated":  false,
+    "processorCount":  4,
+    "dotnetOnPath":  false,
+    "programDirectory":  "C:\\Users\\aurxs\\AppData\\Local\\Temp\\phyphox-validation\\portable",
+    "checks":  [
+                   "self-contained startup",
+                   "offline web entry",
+                   "library / formula / start / pause / stop",
+                   "CSV / XLSX / state exports"
+               ],
+    "physicalDevices":  "not tested",
+    "performance":  "not tested",
+    "health":  {
+                   "version":  "0.1.0-dev",
+                   "platform":  "Microsoft Windows 10.0.26200",
+                   "formatVersion":  "1.20",
+                   "verification":  {
+                                        "windows":  "notExecuted",
+                                        "hardware":  "notExecuted",
+                                        "performance":  "notExecuted"
+                                    },
+                   "portable":  true
+               },
+    "devices":  {
+                    "items":  [
+
+                              ],
+                    "connections":  [
+
+                                    ],
+                    "capabilities":  [
+                                         {
+                                             "kind":  "serial",
+                                             "status":  "implementedUnverified",
+                                             "reason":  "传输层已实现；需要真实设备协议与独立验收，未验证硬件兼容。"
+                                         },
+                                         {
+                                             "kind":  "hid",
+                                             "status":  "implementedUnverified",
+                                             "reason":  "传输层已实现；需要真实设备协议与独立验收，未验证硬件兼容。"
+                                         },
+                                         {
+                                             "kind":  "ble",
+                                             "status":  "implementedUnverified",
+                                             "reason":  "传输层已实现；需要真实设备协议与独立验收，未验证硬件兼容。"
+                                         },
+                                         {
+                                             "kind":  "audio",
+                                             "status":  "notImplemented",
+                                             "reason":  "服务端音频采集/输出待实现。"
+                                         },
+                                         {
+                                             "kind":  "camera",
+                                             "status":  "notImplemented",
+                                             "reason":  "服务端摄像头采集/分析待实现。"
+                                         }
+                                     ]
+                },
+    "status":  "passed",
+    "logsDirectory":  "C:\\Users\\aurxs\\AppData\\Local\\Temp\\phyphox-check-7984cbcac29747999db83148cfc22423"
+}

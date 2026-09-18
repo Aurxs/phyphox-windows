@@ -1,0 +1,20 @@
+**/bin/
+**/obj/
+web/node_modules/
+web/dist/
+artifacts/
+data/
+.build-home/
+.DS_Store
+
+# Local tools, generated browser captures and private configuration
+**/.playwright-cli/
+web/output/
+**/*.tsbuildinfo
+**/__pycache__/
+**/*.pyc
+.env
+.env.*
+!.env.example
+*.user
+*.suo

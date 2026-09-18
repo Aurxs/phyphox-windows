@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>StbImageSharp</id>
+    <version>2.30.16</version>
+    <authors>StbImageSharpTeam</authors>
+    <license type="expression">Unlicense OR MIT</license>
+    <licenseUrl>https://licenses.nuget.org/Unlicense%20OR%20MIT</licenseUrl>
+    <projectUrl>https://github.com/StbSharp/StbImageSharp</projectUrl>
+    <description>C# port of the stb_image.h</description>
+    <repository type="git" commit="125af70cb557033f2c46aec8e82eaaf72ac49817" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.1" />
+      <group targetFramework="net8.0" />
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>

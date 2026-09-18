@@ -1,0 +1,1338 @@
+{
+    "coreAssemblySha256":  "C4A9ED76EF1A7686CECA1CF518A5358534C2613C1F8F7D8FD68F974866B97A1A",
+    "scope":  "Increment only: 1920/2560 layout, trusted graph wheel and corrected serial profile form selector. Previously passed calculation/save/localization flows not repeated.",
+    "checks":  [
+                   {
+                       "details":  {
+                                       "osArchitecture":  "Arm64",
+                                       "dataIsTemporary":  true,
+                                       "cwd":  "C:\\WINDOWS",
+                                       "processArchitecture":  "X64"
+                                   },
+                       "name":  "isolated portable service starts from unrelated working directory",
+                       "passed":  true
+                   },
+                   {
+                       "details":  [
+                                       {
+                                           "viewport":  1920,
+                                           "scrollWidth":  1905,
+                                           "main":  {
+                                                        "x":  220,
+                                                        "width":  1685
+                                                    },
+                                           "groups":  [
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  268,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  807,
+                                                              "width":  511
+                                                          },
+                                                          {
+                                                              "x":  1346,
+                                                              "width":  511
+                                                          }
+                                                      ],
+                                           "columns":  3
+                                       },
+                                       {
+                                           "viewport":  2560,
+                                           "scrollWidth":  2545,
+                                           "main":  {
+                                                        "x":  220,
+                                                        "width":  2325
+                                                    },
+                                           "groups":  [
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1397,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  1953,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  284,
+                                                              "width":  528
+                                                          },
+                                                          {
+                                                              "x":  840,
+                                                              "width":  528
+                                                          }
+                                                      ],
+                                           "columns":  4
+                                       }
+                                   ],
+                       "name":  "library uses multiple columns without page horizontal overflow at 1920 and 2560",
+                       "passed":  true
+                   },
+                   {
+                       "details":  [
+                                       {
+                                           "path":  "/assets/index-BqvbOYUW.js",
+                                           "bytes":  359584,
+                                           "sha256":  "7c5e12ded5ca9fb8257c21169b14b360c97159b51621cce31a8983533468cc1b"
+                                       },
+                                       {
+                                           "path":  "/assets/index-MYbY4ald.css",
+                                           "bytes":  30096,
+                                           "sha256":  "1434dfe9ea051de4b2e572413305522ec9720f8961b3cc61beca5fddc8bf4038"
+                                       }
+                                   ],
+                       "name":  "browser-served CSS/JS bytes match published package SHA256",
+                       "passed":  true
+                   },
+                   {
+                       "details":  {
+                                       "event":  "CDP trusted mouseWheel",
+                                       "note":  "Empty unavailable-hardware graph: tests wheel interaction and passive-event errors, not measured-data zoom accuracy.",
+                                       "after":  0,
+                                       "before":  0,
+                                       "canvasWidth":  679.328125,
+                                       "issues":  [
+
+                                                  ]
+                                   },
+                       "name":  "trusted canvas wheel cancels page scrolling without passive-listener error",
+                       "passed":  true
+                   },
+                   {
+                       "details":  {
+                                       "transportChoices":  [
+                                                                "USB 串口",
+                                                                "USB HID",
+                                                                "Bluetooth LE"
+                                                            ],
+                                       "formValues":  [
+                                                          "",
+                                                          "",
+                                                          "",
+                                                          "",
+                                                          ""
+                                                      ],
+                                       "details":  6
+                                   },
+                       "name":  "device form renders without assumed serial settings or hardware scan",
+                       "passed":  true
+                   },
+                   {
+                       "details":  {
+                                       "title":  "麦克风、摄像头与扬声器",
+                                       "text":  "MEDIA DEVICES\n\n麦克风、摄像头与扬声器\n\n通过浏览器授权使用普通媒体设备，实验分析与数据保存仍由本地服务完成。\n\n通过浏览器使用麦克风与摄像头\n\n手动选择并授权设备。本地服务继续负责实验计算、状态和保存；BLE / USB 仍由服务连接。进入页面不会打开设备。\n\n此入口是实际采集，不是模拟。暂停保留授权来源，服务不写入测量数据；停止、清空或切换实验后需重新启用来源。请保持网页运行；后台节流或断网可使服务停止测量。浏览器可能重采样或处理音频；普通相机无法保证曝光与物理标定，也不提供深度测量。\n读取浏览器设备列表（不打开）\n停止实验并释放浏览器设备\n\n授权前设备名可能不可见；系统默认来源只有授权后才能确认具体硬件。\n\n麦克风\n浏览器设备\n系统默认（实际设备需授权后核对）\n关联实验输入\n请选择实验输入…\n当前实验没有此类输入；请先加载对应实验。\n授权麦克风并准备音频来源\n\n设备未启用\n\n已接收批次: 0 · 跳过批次（仅相机；音频拥塞即停止）: 0\n\n传送单声道 PCM，使用 AudioContext 实际采样率。不输出扬声器回放；请求关闭回声消除、降噪及自动增益，但实际处理与幅值标定需验证。\n\n普通摄像头\n浏览器设备\n系统默认（实际设备需授权后核对）\n关联实验输入\n请选择实验输入…\n当前实验没有此类输入；请先加载对应实验。\n请求宽度\n请求高度\n发送帧率上限\n光谱方向（不代表已支持光谱测量）\n水平\n垂直\n授权摄像头并准备图像来源\n\n设备未启用\n\n已接收批次: 0 · 跳过批次（仅相机；音频拥塞即停止）: 0\n\n尺寸与帧率为请求值，真实帧尺寸随数据上报；服务按实验设置处理 ROI。时间以服务接收时刻为准，不是硬件时间戳。JPEG 压缩和浏览器颜色处理不适合未经标定的物理亮度或曝光测量；本入口仅支持后端明确允许的相机通道。\n\n浏览器扬声器\n\n后台根据真实实验数据生成声音，浏览器仅播放。先暂停实验并点击启用，再开始测量；不会自动播放测试音。\n\n实验音频输出\n请选择输出…\n播放音量 10%\n点击启用扬声器\n立即停止声音\n仅支持已实现的循环音频实验。暂停保留设置；停止、清空、切换实验或隐藏浏览器页面后需重新启用。非循环逐分析触发尚不支持。\n高级：Windows 原生音频与相机接口",
+                                       "captureCalls":  0,
+                                       "audioContexts":  0,
+                                       "enabledBanner":  false,
+                                       "volume":  "0.1"
+                                   },
+                       "name":  "browser microphone camera and speaker controls render with zero capture or AudioContext creation",
+                       "passed":  true
+                   }
+               ],
+    "wideLayouts":  [
+                        {
+                            "viewport":  1920,
+                            "scrollWidth":  1905,
+                            "main":  {
+                                         "x":  220,
+                                         "width":  1685
+                                     },
+                            "groups":  [
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  268,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  807,
+                                               "width":  511
+                                           },
+                                           {
+                                               "x":  1346,
+                                               "width":  511
+                                           }
+                                       ],
+                            "columns":  3
+                        },
+                        {
+                            "viewport":  2560,
+                            "scrollWidth":  2545,
+                            "main":  {
+                                         "x":  220,
+                                         "width":  2325
+                                     },
+                            "groups":  [
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1397,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  1953,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  284,
+                                               "width":  528
+                                           },
+                                           {
+                                               "x":  840,
+                                               "width":  528
+                                           }
+                                       ],
+                            "columns":  4
+                        }
+                    ],
+    "checkedAt":  "2026-09-18T14:45:23.7458337+00:00",
+    "media":  {
+                  "title":  "麦克风、摄像头与扬声器",
+                  "text":  "MEDIA DEVICES\n\n麦克风、摄像头与扬声器\n\n通过浏览器授权使用普通媒体设备，实验分析与数据保存仍由本地服务完成。\n\n通过浏览器使用麦克风与摄像头\n\n手动选择并授权设备。本地服务继续负责实验计算、状态和保存；BLE / USB 仍由服务连接。进入页面不会打开设备。\n\n此入口是实际采集，不是模拟。暂停保留授权来源，服务不写入测量数据；停止、清空或切换实验后需重新启用来源。请保持网页运行；后台节流或断网可使服务停止测量。浏览器可能重采样或处理音频；普通相机无法保证曝光与物理标定，也不提供深度测量。\n读取浏览器设备列表（不打开）\n停止实验并释放浏览器设备\n\n授权前设备名可能不可见；系统默认来源只有授权后才能确认具体硬件。\n\n麦克风\n浏览器设备\n系统默认（实际设备需授权后核对）\n关联实验输入\n请选择实验输入…\n当前实验没有此类输入；请先加载对应实验。\n授权麦克风并准备音频来源\n\n设备未启用\n\n已接收批次: 0 · 跳过批次（仅相机；音频拥塞即停止）: 0\n\n传送单声道 PCM，使用 AudioContext 实际采样率。不输出扬声器回放；请求关闭回声消除、降噪及自动增益，但实际处理与幅值标定需验证。\n\n普通摄像头\n浏览器设备\n系统默认（实际设备需授权后核对）\n关联实验输入\n请选择实验输入…\n当前实验没有此类输入；请先加载对应实验。\n请求宽度\n请求高度\n发送帧率上限\n光谱方向（不代表已支持光谱测量）\n水平\n垂直\n授权摄像头并准备图像来源\n\n设备未启用\n\n已接收批次: 0 · 跳过批次（仅相机；音频拥塞即停止）: 0\n\n尺寸与帧率为请求值，真实帧尺寸随数据上报；服务按实验设置处理 ROI。时间以服务接收时刻为准，不是硬件时间戳。JPEG 压缩和浏览器颜色处理不适合未经标定的物理亮度或曝光测量；本入口仅支持后端明确允许的相机通道。\n\n浏览器扬声器\n\n后台根据真实实验数据生成声音，浏览器仅播放。先暂停实验并点击启用，再开始测量；不会自动播放测试音。\n\n实验音频输出\n请选择输出…\n播放音量 10%\n点击启用扬声器\n立即停止声音\n仅支持已实现的循环音频实验。暂停保留设置；停止、清空、切换实验或隐藏浏览器页面后需重新启用。非循环逐分析触发尚不支持。\n高级：Windows 原生音频与相机接口",
+                  "captureCalls":  0,
+                  "audioContexts":  0,
+                  "enabledBanner":  false,
+                  "volume":  "0.1"
+              },
+    "browserMessages":  [
+
+                        ],
+    "health":  {
+                   "version":  "0.1.0-dev",
+                   "platform":  "Microsoft Windows 10.0.26200",
+                   "processArchitecture":  "X64",
+                   "osArchitecture":  "Arm64",
+                   "processorCount":  4,
+                   "formatVersion":  "1.20",
+                   "verification":  {
+                                        "hardware":  "notExecuted",
+                                        "performance":  "notExecuted",
+                                        "note":  "See supplied validation records for tested build/environment."
+                                    },
+                   "portable":  true
+               },
+    "requests":  [
+                     {
+                         "url":  "http://127.0.0.1:37655/",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/assets/index-BqvbOYUW.js",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/assets/index-MYbY4ald.css",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/api/v1/bootstrap",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/api/v1/session",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/api/v1/library",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/api/v1/devices",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/api/v1/session",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/assets/index-BqvbOYUW.js",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/assets/index-MYbY4ald.css",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/api/v1/session/load",
+                         "method":  "POST"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/api/v1/devices",
+                         "method":  "GET"
+                     },
+                     {
+                         "url":  "http://127.0.0.1:37655/api/v1/session",
+                         "method":  "GET"
+                     }
+                 ],
+    "edgeVersion":  "153.0.4234.32",
+    "hardwareRequests":  [
+
+                         ],
+    "physicalDevices":  "not opened or tested",
+    "assetHashes":  [
+                        {
+                            "path":  "/assets/index-BqvbOYUW.js",
+                            "bytes":  359584,
+                            "sha256":  "7c5e12ded5ca9fb8257c21169b14b360c97159b51621cce31a8983533468cc1b"
+                        },
+                        {
+                            "path":  "/assets/index-MYbY4ald.css",
+                            "bytes":  30096,
+                            "sha256":  "1434dfe9ea051de4b2e572413305522ec9720f8961b3cc61beca5fddc8bf4038"
+                        }
+                    ],
+    "serverAssemblySha256":  "58B04672C2CDFB16B46EBD8CAF504E187B02A40BF345501E9F0B982F001316A4",
+    "cleanup":  {
+                    "portsReleased":  true,
+                    "temporaryDirectoryRemoved":  true
+                },
+    "platform":  "Windows 11 ARM virtual machine",
+    "servicePort":  37655,
+    "externalPlatforms":  "not accessed",
+    "wheel":  {
+                  "event":  "CDP trusted mouseWheel",
+                  "note":  "Empty unavailable-hardware graph: tests wheel interaction and passive-event errors, not measured-data zoom accuracy.",
+                  "after":  0,
+                  "before":  0,
+                  "canvasWidth":  679.328125,
+                  "issues":  [
+
+                             ]
+              },
+    "edgeDebugPort":  37656,
+    "packageArchitecture":  "x64",
+    "status":  "passed",
+    "programDirectory":  "C:\\Users\\aurxs\\AppData\\Local\\Temp\\phyphox-ux-wide-package-9e94ad81ecfe40b6a70de47485728f3b\\phyphox-windows",
+    "packageZipSha256":  "2E0878C1574874C02DC6ED5C6E4577A13FA773E0E429FD67E28CD2DADACBBA1E",
+    "isolatedPackageRemoved":  true
+}

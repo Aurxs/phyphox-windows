@@ -1,0 +1,9 @@
+Source: https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/ittnotify/include/ittnotify.h
+Bundled source notice (unmodified):
+/*
+  Copyright (C) 2005-2019 Intel Corporation
+
+  SPDX-License-Identifier: GPL-2.0-only OR BSD-3-Clause
+*/
+
+This distribution selects the BSD-3-Clause option.

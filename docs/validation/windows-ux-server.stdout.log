@@ -1,0 +1,14 @@
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:37655
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\aurxs\AppData\Local\Temp\phyphox-ux-package-c0eb1f6dbb104b1b8b7c5e0504f97ee8\phyphox-windows\
+
+phyphox Windows 实验工作台（开发版本）
+浏览器打开：http://127.0.0.1:37655
+数据目录：C:\Users\aurxs\AppData\Local\Temp\phyphox-ux-94e263dff71e41dbb03a9668b26baa54\data
+Ctrl+C 停止服务。设备和 Windows 真机验收尚未执行。
+

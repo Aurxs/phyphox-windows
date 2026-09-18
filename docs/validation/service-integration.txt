@@ -1,0 +1,4 @@
+2026-09-18T12:01:44.172144+00:00
+Host: macOS ARM64; current Debug service
+PASS: token/origin/host; 67 official files; formula; lifecycle; request idempotence; CSV/XLSX/state; snapshot save/restore/list; CSV import; input-cycle replay; actual local HTTP request->receive->analysis->journal replay; missing-hardware gate; ZIP traversal rejection.
+NOT TESTED by this check: physical hardware, performance, all UI/format semantics.

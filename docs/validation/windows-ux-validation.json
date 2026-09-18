@@ -1,0 +1,232 @@
+{
+    "coreAssemblySha256":  "27A4C7391E6D9C6C1F0E33FBA7786F3B9C7B40F83B5677239D67FCB9D3E5336F",
+    "sensor":  {
+                   "title":  "加速度 (含 g)",
+                   "tabs":  [
+                                "图表",
+                                "绝对值",
+                                "多通道",
+                                "简明值"
+                            ],
+                   "captions":  [
+                                    "时间 (t) 秒 · 加速度 (a) m/s² ",
+                                    "时间 (t) 秒 · 加速度 (a) m/s² ",
+                                    "时间 (t) 秒 · 加速度 (a) m/s² "
+                                ],
+                   "startDisabled":  true,
+                   "status":  "需要配置",
+                   "unresolved":  false
+               },
+    "error":  "Serial connection form unexpectedly guessed communication settings.",
+    "checks":  [
+                   {
+                       "details":  {
+                                       "osArchitecture":  "Arm64",
+                                       "dataIsTemporary":  true,
+                                       "cwd":  "C:\\WINDOWS",
+                                       "processArchitecture":  "X64"
+                                   },
+                       "name":  "isolated portable service starts from unrelated working directory",
+                       "passed":  true
+                   },
+                   {
+                       "details":  {
+                                       "heading":  "从一个实验开始",
+                                       "categories":  15,
+                                       "rows":  68,
+                                       "search":  true,
+                                       "welcome":  true,
+                                       "sidebar":  5,
+                                       "viewport":  1440,
+                                       "scrollWidth":  1425
+                                   },
+                       "name":  "new categorized library, search, source filters and navigation render",
+                       "passed":  true
+                   },
+                   {
+                       "details":  [
+                                       {
+                                           "path":  "/assets/index-CHiWs1hO.js",
+                                           "bytes":  335409,
+                                           "sha256":  "8e97a2dc66817fa1d146902745cb1021ce5fc43dd591519efce350a09e1bb5d5"
+                                       },
+                                       {
+                                           "path":  "/assets/index-BmBwpDbp.css",
+                                           "bytes":  26985,
+                                           "sha256":  "e7602b5249d3a868c82cfe57a98c0fca4d47129c418014842805ce5a57929b4a"
+                                       }
+                                   ],
+                       "name":  "browser-served CSS/JS bytes match published package SHA256",
+                       "passed":  true
+                   },
+                   {
+                       "details":  {
+                                       "title":  "加速度 (含 g)",
+                                       "tabs":  [
+                                                    "图表",
+                                                    "绝对值",
+                                                    "多通道",
+                                                    "简明值"
+                                                ],
+                                       "captions":  [
+                                                        "时间 (t) 秒 · 加速度 (a) m/s² ",
+                                                        "时间 (t) 秒 · 加速度 (a) m/s² ",
+                                                        "时间 (t) 秒 · 加速度 (a) m/s² "
+                                                    ],
+                                       "startDisabled":  true,
+                                       "status":  "需要配置",
+                                       "unresolved":  false
+                                   },
+                       "name":  "official accelerometer translated tabs/units and disabled start with needs-setup status",
+                       "passed":  true
+                   },
+                   {
+                       "details":  {
+                                       "input":  2,
+                                       "id":  "sample-84281042995114bb0660",
+                                       "square":  4
+                                   },
+                       "name":  "formula opened through library UI with initial actual 2 squared equals 4",
+                       "passed":  true
+                   },
+                   {
+                       "details":  {
+                                       "input":  3,
+                                       "source":  "real browser input and actual local engine",
+                                       "cycle":  1,
+                                       "square":  9
+                                   },
+                       "name":  "actual browser input 3 computes and renders 9",
+                       "passed":  true
+                   },
+                   {
+                       "details":  {
+                                       "cyclePreserved":  true,
+                                       "allBuffersPreserved":  true,
+                                       "input":  3,
+                                       "square":  9
+                                   },
+                       "name":  "cancel clear preserves all actual buffers and calculation cycle",
+                       "passed":  true
+                   },
+                   {
+                       "details":  {
+                                       "title":  "保存与导出",
+                                       "options":  [
+                                                       {
+                                                           "text":  "保存到本机\n保存当前数据和状态，稍后从“数据与回放”恢复。",
+                                                           "disabled":  false
+                                                       },
+                                                       {
+                                                           "text":  "下载实验状态 .phyphox\n将实验定义与当前数据一起保存为文件。",
+                                                           "disabled":  false
+                                                       },
+                                                       {
+                                                           "text":  "导出数据表 CSV / ZIP\n打包下载数据表，适合后续处理与分析。",
+                                                           "disabled":  false
+                                                       },
+                                                       {
+                                                           "text":  "导出 Excel 工作簿 .xlsx\n使用 Excel 或其他兼容表格软件打开。",
+                                                           "disabled":  false
+                                                       }
+                                                   ]
+                                   },
+                       "name":  "save menu exposes local save, state, CSV/ZIP and XLSX actions",
+                       "passed":  true
+                   }
+               ],
+    "checkedAt":  "2026-09-18T14:26:32.7649297+00:00",
+    "libraryDom":  {
+                       "heading":  "从一个实验开始",
+                       "categories":  15,
+                       "rows":  68,
+                       "search":  true,
+                       "welcome":  true,
+                       "sidebar":  5,
+                       "viewport":  1440,
+                       "scrollWidth":  1425
+                   },
+    "saveMenu":  {
+                     "title":  "保存与导出",
+                     "options":  [
+                                     {
+                                         "text":  "保存到本机\n保存当前数据和状态，稍后从“数据与回放”恢复。",
+                                         "disabled":  false
+                                     },
+                                     {
+                                         "text":  "下载实验状态 .phyphox\n将实验定义与当前数据一起保存为文件。",
+                                         "disabled":  false
+                                     },
+                                     {
+                                         "text":  "导出数据表 CSV / ZIP\n打包下载数据表，适合后续处理与分析。",
+                                         "disabled":  false
+                                     },
+                                     {
+                                         "text":  "导出 Excel 工作簿 .xlsx\n使用 Excel 或其他兼容表格软件打开。",
+                                         "disabled":  false
+                                     }
+                                 ]
+                 },
+    "health":  {
+                   "version":  "0.1.0-dev",
+                   "platform":  "Microsoft Windows 10.0.26200",
+                   "processArchitecture":  "X64",
+                   "osArchitecture":  "Arm64",
+                   "processorCount":  4,
+                   "formatVersion":  "1.20",
+                   "verification":  {
+                                        "hardware":  "notExecuted",
+                                        "performance":  "notExecuted",
+                                        "note":  "See supplied validation records for tested build/environment."
+                                    },
+                   "portable":  true
+               },
+    "edgeVersion":  "153.0.4234.32",
+    "failedStage":  "device form without device activation",
+    "physicalDevices":  "not opened or tested",
+    "clearCancel":  {
+                        "cyclePreserved":  true,
+                        "allBuffersPreserved":  true,
+                        "input":  3,
+                        "square":  9
+                    },
+    "assetHashes":  [
+                        {
+                            "path":  "/assets/index-CHiWs1hO.js",
+                            "bytes":  335409,
+                            "sha256":  "8e97a2dc66817fa1d146902745cb1021ce5fc43dd591519efce350a09e1bb5d5"
+                        },
+                        {
+                            "path":  "/assets/index-BmBwpDbp.css",
+                            "bytes":  26985,
+                            "sha256":  "e7602b5249d3a868c82cfe57a98c0fca4d47129c418014842805ce5a57929b4a"
+                        }
+                    ],
+    "serverAssemblySha256":  "C86BF05698E6CBF38334137EC5CDD0F66344A4FC58ABFCC70028726805FBEB89",
+    "cleanup":  {
+                    "portsReleased":  true,
+                    "temporaryDirectoryRemoved":  true
+                },
+    "platform":  "Windows 11 ARM virtual machine",
+    "servicePort":  37655,
+    "externalPlatforms":  "not accessed",
+    "localizedLabels":  {
+                            "rawSensors":  true,
+                            "acceleration":  true,
+                            "brightness":  true,
+                            "formula":  true
+                        },
+    "edgeDebugPort":  37656,
+    "packageArchitecture":  "x64",
+    "status":  "failed",
+    "formula":  {
+                    "input":  3,
+                    "source":  "real browser input and actual local engine",
+                    "cycle":  1,
+                    "square":  9
+                },
+    "programDirectory":  "C:\\Users\\aurxs\\AppData\\Local\\Temp\\phyphox-ux-package-c0eb1f6dbb104b1b8b7c5e0504f97ee8\\phyphox-windows",
+    "packageZipSha256":  "A62017DAE00E450B0D7C361F58BC1B976252B22EC7E8D49056F999A4A26FB4B8",
+    "isolatedPackageRemoved":  false,
+    "validationScope":  "Functional UX; any later widescreen/wheel increment requires its own asset-specific report."
+}

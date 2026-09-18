@@ -1,0 +1,20 @@
+{
+    "edgeVersion":  "153.0.4234.32",
+    "dom":  {
+                "input":  "2",
+                "title":  "phyphox · Windows",
+                "formulaFour":  true
+            },
+    "physicalDevices":  "not opened or tested",
+    "checkedAt":  "2026-09-18T12:28:42.5127136+00:00",
+    "externalPlatforms":  "not accessed",
+    "serverAssemblySha256":  "E95A071071F293BED3B01EAB796C0F7717447BE0B67DE3646668F7F17E42EB6D",
+    "status":  "passed",
+    "platform":  "Windows 11 ARM virtual machine",
+    "port":  37655,
+    "checks":  [
+                   "actual final package formula preload",
+                   "installed Edge rendered actual React formula input 2 and result 4.0000",
+                   "captured headless Edge screenshot"
+               ]
+}

@@ -1,0 +1,52 @@
+{
+    "coreAssemblySha256":  "C4A9ED76EF1A7686CECA1CF518A5358534C2613C1F8F7D8FD68F974866B97A1A",
+    "error":  "Wide library layout failed: {\"viewport\":1920,\"scrollWidth\":1905,\"main\":{\"x\":220,\"width\":1685},\"groups\":[{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589},{\"x\":268,\"width\":1589}],\"columns\":1}",
+    "scope":  "Increment only: 1920/2560 layout, trusted graph wheel and corrected serial profile form selector. Previously passed calculation/save/localization flows not repeated.",
+    "checks":  [
+                   {
+                       "details":  {
+                                       "osArchitecture":  "Arm64",
+                                       "dataIsTemporary":  true,
+                                       "cwd":  "C:\\WINDOWS",
+                                       "processArchitecture":  "X64"
+                                   },
+                       "name":  "isolated portable service starts from unrelated working directory",
+                       "passed":  true
+                   }
+               ],
+    "wideLayouts":  [
+
+                    ],
+    "checkedAt":  "2026-09-18T14:44:39.7528860+00:00",
+    "health":  {
+                   "version":  "0.1.0-dev",
+                   "platform":  "Microsoft Windows 10.0.26200",
+                   "processArchitecture":  "X64",
+                   "osArchitecture":  "Arm64",
+                   "processorCount":  4,
+                   "formatVersion":  "1.20",
+                   "verification":  {
+                                        "hardware":  "notExecuted",
+                                        "performance":  "notExecuted",
+                                        "note":  "See supplied validation records for tested build/environment."
+                                    },
+                   "portable":  true
+               },
+    "edgeVersion":  "153.0.4234.32",
+    "failedStage":  "wide library layout",
+    "physicalDevices":  "not opened or tested",
+    "serverAssemblySha256":  "58B04672C2CDFB16B46EBD8CAF504E187B02A40BF345501E9F0B982F001316A4",
+    "cleanup":  {
+                    "portsReleased":  true,
+                    "temporaryDirectoryRemoved":  true
+                },
+    "platform":  "Windows 11 ARM virtual machine",
+    "servicePort":  37655,
+    "externalPlatforms":  "not accessed",
+    "edgeDebugPort":  37656,
+    "packageArchitecture":  "x64",
+    "status":  "failed",
+    "programDirectory":  "C:\\Users\\aurxs\\AppData\\Local\\Temp\\phyphox-ux-wide-package-b2db4446e4ed42d6b137aaad86aeea02\\phyphox-windows",
+    "packageZipSha256":  "2E0878C1574874C02DC6ED5C6E4577A13FA773E0E429FD67E28CD2DADACBBA1E",
+    "isolatedPackageRemoved":  true
+}

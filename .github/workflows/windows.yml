@@ -1,0 +1,65 @@
+name: Windows portable verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  portable:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: phyphox/phyphox-docs
+          ref: 3dcfdae14f3c3a957208c367a026a0589f6dd702
+          path: official-reference/phyphox-docs
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.401
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Frontend focused checks
+        working-directory: web
+        shell: pwsh
+        run: |
+          npm ci
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          npm test
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          npm run build
+          exit $LASTEXITCODE
+      - name: Official core and focused I/O checks
+        shell: pwsh
+        run: |
+          dotnet run --project tests/Phyphox.Core.Tests -- official-reference/phyphox-docs/corpus/analysis/vectors
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          dotnet run --project tests/Phyphox.Core.Tests -- --corpus official-reference/phyphox-docs/corpus
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          foreach ($project in @('Devices','Media','Camera','MediaMapping','DeviceOutput','Storage')) {
+            dotnet run --project "tests/Phyphox.$project.Tests"
+            if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          }
+          dotnet run --project tests/Phyphox.Network.Tests -- official-reference/phyphox-docs
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          dotnet run --project tests/Phyphox.BleInput.Tests -- official-reference/phyphox-docs
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Publish and run portable service
+        shell: pwsh
+        run: |
+          ./tools/publish-windows.ps1 -SkipWebBuild
+          ./tools/test-windows.ps1 -ProgramDirectory artifacts/win-x64 -ReportPath artifacts/windows-server-validation.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: windows-portable-and-report
+          path: |
+            artifacts/win-x64
+            artifacts/windows-server-validation.json
+      # A hosted Windows Server runner is not physical Win10/11, BLE, USB, camera, or audio acceptance.

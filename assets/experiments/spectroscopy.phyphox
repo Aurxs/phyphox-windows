@@ -1,0 +1,318 @@
+<phyphox version="1.20" locale="en">
+  <title>Spectroscopy</title>
+  <category>Camera</category>
+  <icon format="base64">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</icon>
+  <description>Use an external diffraction grating for spectroscopy.If you do not have a dedicated diffraction grating, a part of a CD or DVD will work as well. Set up your experiment such that the camera can see the rainbow of the diffraction and select in phyphox whether the diffraction occurs horizontally or vertically. Phyphox will average contributions from same wavelengths in the selected area of the camera image. You can also calibrate your spectrum.</description>
+  <translations>
+    <translation locale="cs">
+      <string original="Preview">Náhled</string>
+      <string original="Calibrate">Zkalibrovat</string>
+      <string original="Spectrum">Spektrum</string>
+    </translation>
+    <translation locale="de">
+      <string original="Preview">Vorschau</string>
+      <string original="Calibrate">Kalibrieren</string>
+      <string original="Spectrum">Spektrum</string>
+      <title>Spektroskopie</title>
+      <category>Kamera</category>
+      <description>Verwende für die Spektroskopie ein externes Beugungsgitter. Falls du kein spezielles Beugungsgitter hast, eignet sich auch ein Stück einer CD oder DVD. Richte den Versuch so ein, dass die Kamera den durch die Beugung entstehenden Regenbogen des Spektrums erfassen kann. Wähle anschließend in phyphox aus, ob das Spektrum horizontal oder vertikal verläuft. phyphox mittelt dann die Beiträge gleicher Wellenlängen innerhalb des ausgewählten Bereichs des Kamerabildes. Außerdem kannst du dein Spektrum kalibrieren.</description>
+      <string original="Calibration data">Kalibrierungsdaten</string>
+      <string original="1 Camera">1 Kamera</string>
+      <string original="Set up your camera">Kamera einrichten</string>
+      <string original="Use a diffraction grating and align your phone's camera on a tripod such that it can see the generated rainbow. Tap the preview image and drag the handles of the highlighted rectangle to select only the rainbow. Make sure its color bands are either perfectly horizontal or vertical and select the spectrum orientation accordingly. Then move on to tab 2.">Verwende ein Beugungsgitter und richte die Kamera deines Smartphones auf einem Stativ so aus, dass sie den erzeugten Regenbogen des Spektrums erfassen kann. Tippe auf das Vorschaubild und ziehe die Griffe des hervorgehobenen Rechtecks, sodass nur das Spektrum ausgewählt ist. Achte darauf, dass die Farbbänder exakt horizontal oder vertikal verlaufen, und wähle die entsprechende Ausrichtung des Spektrums aus. Wechsle anschließend zu Tab 2.</string>
+      <string original="2 Calibration">2 Kalibrierung</string>
+      <string original="In this tab you can calibrate your spectrum">In diesem Tab kannst du dein Spektrum kalibrieren</string>
+      <string original="Raw Spectrum">Rohdaten des Spektrums</string>
+      <string original="Position on sensor">Position auf dem Sensor</string>
+      <string original="Calibration 1">Kalibrierung 1</string>
+      <string original="Wavelength in nm">Wellenlänge in nm</string>
+      <string original="Calibration 2">Kalibrierung 2</string>
+      <string original="Wavelength 1">Wellenlänge 1</string>
+      <string original="Wavelength 2">Wellenlänge 2</string>
+      <string original="Using a known light source, you can tap the graph, select the calibrate mode at the bottom and pick peaks to match them with knwon wavelengths. You can then see the calibrated spectrum on tab 3.">Wenn du eine Lichtquelle mit bekannten Spektrallinien verwendest, kannst du auf das Diagramm tippen, unten den Kalibrierungsmodus auswählen und Spektrallinien markieren, um sie bekannten Wellenlängen zuzuordnen. Das kalibrierte Spektrum wird anschließend auf Tab 3 angezeigt.</string>
+      <string original="3 Spectrum">3 Spektrum</string>
+      <string original="After calibrating your spectrometer in tab 2, you can see your calibrated spectrum here.">Nachdem du dein Spektrometer in Tab 2 kalibriert hast, wird hier das kalibrierte Spektrum angezeigt.</string>
+      <string original="Note that your phone's camera uses filters to capture red, green and blue components. The resulting relative luminance depends on the wavelength, so the intensity of different wavelengths is not comparable in this spectrum.">Beachte, dass die Kamera deines Smartphones Filter verwendet, um die roten, grünen und blauen Farbanteile zu erfassen. Die daraus resultierende relative Helligkeit hängt von der Wellenlänge ab. Daher sind die Intensitäten verschiedener Wellenlängen in diesem Spektrum nicht miteinander vergleichbar.</string>
+    </translation>
+    <translation locale="el">
+      <string original="Preview">Προεπισκόπηση</string>
+      <string original="Calibrate">Βαθμονόμηση</string>
+      <string original="Spectrum">Φάσμα</string>
+      <title>Φασματοσκοπία</title>
+      <category>Κάμερα</category>
+      <description>Χρησιμοποιήστε ένα εξωτερικό φράγμα περίθλασης για φασματοσκοπία. Αν δεν έχετε φράγμα περίθλασης, μπορείτε να χρησιμοποιήσετε ένα τμήμα ενός CD ή DVD. Ρυθμίστε το πείραμά σας έτσι ώστε η κάμερα να καταγράφει το ουράνιο τόξο της περίθλασης και επιλέξτε στο Phyphox αν η περίθλαση καταγράφεται οριζόντια ή κάθετα. Το Phyphox θα υπολογίσει τον μέσο όρο των συνεισφορών από τα ίδια μήκη κύματος στην επιλεγμένη περιοχή της εικόνας της κάμερας. Μπορείτε επίσης να βαθμονομήσετε το φάσμα σας.</description>
+      <string original="Calibration data">Δεδομένα βαθμονόμησης</string>
+      <string original="1 Camera">1 Κάμερα</string>
+      <string original="Set up your camera">Ρυθμίστε την κάμερά σας</string>
+      <string original="Use a diffraction grating and align your phone's camera on a tripod such that it can see the generated rainbow. Tap the preview image and drag the handles of the highlighted rectangle to select only the rainbow. Make sure its color bands are either perfectly horizontal or vertical and select the spectrum orientation accordingly. Then move on to tab 2.">Χρησιμοποιήστε ένα φράγμα περίθλασης, τοποθετήστε την κάμερα του κινητού σας σε ένα τρίποδο, έτσι ώστε να μπορεί να καταγράψει το ουράνιο τόξο που δημιουργείται. Πατήστε την εικόνα προεπισκόπησης και σύρετε τα χερούλια του φωτισμένου ορθογωνίου για να επιλέξετε μόνο το ουράνιο τόξο. Βεβαιωθείτε ότι οι χρωματικές ζώνες του είναι είτε απόλυτα οριζόντιες είτε κάθετες και επιλέξτε τον προσανατολισμό του φάσματος ανάλογα. Στη συνέχεια, προχωρήστε στην καρτέλα 2.</string>
+      <string original="2 Calibration">2 Βαθμονόμηση</string>
+      <string original="In this tab you can calibrate your spectrum">Στην καρτέλα αυτή μπορείτε να βαθμονομήσετε το φάσμα σας</string>
+      <string original="Raw Spectrum">Μη βαθμονομημένο Φάσμα</string>
+      <string original="Position on sensor">Σημείο στον αισθητήρα</string>
+      <string original="Calibration 1">Βαθμονόμηση 1</string>
+      <string original="Wavelength in nm">Μήκος κύματος σε nm</string>
+      <string original="Calibration 2">Βαθμονόμηση 2</string>
+      <string original="Wavelength 1">Μήκος κύματος 1</string>
+      <string original="Wavelength 2">Μήκος Κύματος 2</string>
+      <string original="Using a known light source, you can tap the graph, select the calibrate mode at the bottom and pick peaks to match them with knwon wavelengths. You can then see the calibrated spectrum on tab 3.">Χρησιμοποιείστε μια γνωστή φωτεινή πηγή, πατήστε πάνω στο γράφημα, επιλέξτε το πλήκτρο βαθμονόμησης στο κάτω μέρος και επιλέξτε κορυφές που αντιστοιχούν σε γνωστά μήκη κύματος. Μετά μπορείτε να δείτε το βαθμονομημένο διάγραμμα στην καρτέλα 3.</string>
+      <string original="3 Spectrum">3 Φάσμα</string>
+      <string original="After calibrating your spectrometer in tab 2, you can see your calibrated spectrum here.">Μετά τη βαθμονόμηση του φασματοσκοπίου στην καρτέλα 2, μπορείτε να δείτε εδώ το βαθμονομημένο φάσμα.</string>
+      <string original="Note that your phone's camera uses filters to capture red, green and blue components. The resulting relative luminance depends on the wavelength, so the intensity of different wavelengths is not comparable in this spectrum.">Σημειώστε ότι η κάμερα του κινητού σας χρησιμοποιεί φίλτρα για να καταγράψει τις συνιστώσες του κόκκινου, του πράσινου και του μπλε. Η σχετική φωτεινότητα που προκύπτει εξαρτάται από το μήκος κύματος, οπότε η ένταση διαφορετικών μηκών κύματος δεν είναι συγκρίσιμη σε αυτό το φάσμα.</string>
+    </translation>
+    <translation locale="es">
+      <string original="Calibrate">Calibrar</string>
+      <string original="Spectrum">Espectro</string>
+    </translation>
+    <translation locale="fr">
+      <string original="Calibrate">Étalonner</string>
+      <string original="Spectrum">Spectre</string>
+    </translation>
+    <translation locale="hi">
+      <string original="Preview">पूर्वावलोकन</string>
+      <string original="Calibrate">कैलिब्रेट</string>
+      <string original="Spectrum">वर्णक्रम</string>
+    </translation>
+    <translation locale="it">
+      <string original="Calibrate">Calibra</string>
+      <string original="Spectrum">Spettro</string>
+    </translation>
+    <translation locale="ja">
+      <string original="Calibrate">補正</string>
+      <string original="Spectrum">スペクトル</string>
+    </translation>
+    <translation locale="ka">
+      <string original="Preview">ნახვა</string>
+      <string original="Calibrate">დაკალიბრება</string>
+      <string original="Spectrum">სპექტრი</string>
+    </translation>
+    <translation locale="nl">
+      <string original="Calibrate">Kalibreer</string>
+    </translation>
+    <translation locale="pl">
+      <string original="Preview">Podgląd</string>
+      <string original="Calibrate">Kalibracja</string>
+      <string original="Spectrum">Widmo</string>
+    </translation>
+    <translation locale="pt">
+      <string original="Calibrate">Calibrar</string>
+      <string original="Spectrum">Espectro</string>
+    </translation>
+    <translation locale="ru">
+      <string original="Preview">Предварительный просмотр</string>
+      <string original="Calibrate">Калибровать</string>
+      <string original="Spectrum">Спектр</string>
+    </translation>
+    <translation locale="sr">
+      <string original="Calibrate">Kalibriraj</string>
+      <string original="Spectrum">Spektar</string>
+    </translation>
+    <translation locale="sr_Latn">
+      <string original="Calibrate">Kalibriraj</string>
+      <string original="Spectrum">Spektar</string>
+    </translation>
+    <translation locale="ta">
+      <string original="Preview">வெள்ளோட்டம்</string>
+      <string original="Calibrate">அளவுத்திருத்தம்</string>
+      <string original="Spectrum">நிறமாலை</string>
+      <title>நிறமாலையியல்</title>
+      <category>ஒளிப்படவி</category>
+      <description>நிறமாலை ஆய்வுக்கு (spectroscopy) ஒரு வெளிப்புற விளிம்பு விளைவுத் தட்டி (diffraction grating) ஒன்றைப் பயன்படுத்தவும். உங்களிடம் இதற்கெனத் தனிப்பட்ட தட்டி இல்லையென்றால், ஒரு CD அல்லது DVD-யின் ஒரு பகுதியையும் இதற்குப் பயன்படுத்தலாம். கேமராவால் விளிம்பு விளைவினால் உருவாகும் வானவில் போன்ற நிறப்பட்டையை (spectrum) காணக்கூடிய வகையில் உங்கள் சோதனையை அமைக்கவும்; மேலும், அந்த விளிம்பு விளைவு கிடைமட்டமாகவா அல்லது செங்குத்தாகவா நிகழ்கிறது என்பதை phyphox செயலியில் தேர்ந்தெடுக்கவும். கேமரா பிம்பத்தின் தேர்ந்தெடுக்கப்பட்ட பகுதியில், ஒரே அலைநீளம் கொண்டவற்றின் பங்களிப்புகளை phyphox சராசரி செய்யும். உங்கள் நிறமாலையை நீங்கள் அளவுத்திருத்தம் (calibrate) செய்யவும் முடியும்.</description>
+      <string original="Calibration data">அளவுத்திருத்த தரவு</string>
+      <string original="1 Camera">ஒளிப்படவி 1</string>
+      <string original="Set up your camera">உங்கள் ஒளிப்படவியை அமைக்கவும்</string>
+      <string original="Use a diffraction grating and align your phone's camera on a tripod such that it can see the generated rainbow. Tap the preview image and drag the handles of the highlighted rectangle to select only the rainbow. Make sure its color bands are either perfectly horizontal or vertical and select the spectrum orientation accordingly. Then move on to tab 2.">விளிம்பு விலகல் கீற்றைப் பயன்படுத்தி, உருவாக்கப்பட்ட வானவில்லை உங்கள் தொலைபேசி ஒளிப்படவி காணுமாறு ஒரு முக்காலியில் (tripod) சீரமைக்கவும். முன்னோட்டப் படத்தைத் தட்டி, வானவில்லை மட்டும் தேர்ந்தெடுக்க, முன்னிலைப்படுத்தப்பட்ட செவ்வகத்தின் கைப்பிடிகளை இழுக்கவும். அதன் வண்ணப் பட்டைகள் கச்சிதமாகக் கிடைமட்டமாகவோ அல்லது செங்குத்தாகவோ இருப்பதை உறுதிசெய்து, அதற்கேற்ப நிறமாலையின் திசையைத் தேர்ந்தெடுக்கவும். பின்னர், பட்டி 2-க்குச் செல்லவும்.</string>
+      <string original="2 Calibration">அளவுத்திருத்தம் 2</string>
+      <string original="In this tab you can calibrate your spectrum">இந்தப் பட்டியில் (tab) உங்கள் நிறமாலையை (spectrum) நீங்கள் அளவீடு செய்யலாம்</string>
+      <string original="Raw Spectrum">மூல நிறமாலை</string>
+      <string original="Position on sensor">உணர்வியின் நிலை</string>
+      <string original="Calibration 1">அளவுத்திருத்தம் 1</string>
+      <string original="Wavelength in nm">நானோமீட்டர்-ல் அலைநீளம்</string>
+      <string original="Calibration 2">அளவுத்திருத்தம் 2</string>
+      <string original="Pixel 1">புள்ளி 1</string>
+      <string original="Wavelength 1">அலைநீளம் 1</string>
+      <string original="nm">நானோமீட்டர் (நா.மீ)</string>
+      <string original="Pixel 2">புள்ளி 2</string>
+      <string original="Wavelength 2">அலைநீளம் 2</string>
+      <string original="Using a known light source, you can tap the graph, select the calibrate mode at the bottom and pick peaks to match them with knwon wavelengths. You can then see the calibrated spectrum on tab 3.">அறியப்பட்ட ஒளி மூலத்தைப் பயன்படுத்தி, நீங்கள் வரைபடத்தைத் தட்டி, கீழே உள்ள அளவுத்திருத்தப் பயன்முறையைத் தேர்ந்தெடுத்து, அறியப்பட்ட அலைநீளங்களுடன் பொருத்துவதற்கு உச்சங்களைத் தேர்ந்தெடுக்கலாம். அதன் பிறகு, அளவுத்திருத்தம் செய்யப்பட்ட நிறமாலையை பட்டி 3-இல் காணலாம்.</string>
+      <string original="3 Spectrum">நிறமாலை 3</string>
+      <string original="After calibrating your spectrometer in tab 2, you can see your calibrated spectrum here.">பட்டி-2 இல் உங்கள் நிறமாலை அளவியை (spectrometer) அளவுத்திருத்தம் செய்த பிறகு, அளவுத்திருத்தம் செய்யப்பட்ட உங்கள் நிறமாலை (spectrum) இங்கே காணலாம்.</string>
+      <string original="Note that your phone's camera uses filters to capture red, green and blue components. The resulting relative luminance depends on the wavelength, so the intensity of different wavelengths is not comparable in this spectrum.">உங்கள் தொலைபேசியின் ஒளிப்படவி சிவப்பு, பச்சை மற்றும் நீலக் கூறுகளைப் பதிவு செய்ய வடிகட்டிகளைப் (filters) பயன்படுத்துகிறது என்பதை நினைவில் கொள்க. இதன் விளைவாகக் கிடைக்கும் ஒப்புமை ஒளிர்வு (relative luminance) அலைநீளத்தைச் சார்ந்துள்ளதால், இந்த நிறமாலையில் வெவ்வேறு அலைநீளங்களின் செறிவுகளை ஒன்றுடன் ஒன்று ஒப்பிட முடியாது.</string>
+    </translation>
+    <translation locale="tr">
+      <string original="Calibrate">Kalibre et</string>
+      <string original="Spectrum">Spektrum</string>
+    </translation>
+    <translation locale="vi">
+      <string original="Preview">Xem trước</string>
+      <string original="Calibrate">Hiệu chỉnh</string>
+      <string original="Spectrum">Phổ</string>
+    </translation>
+    <translation locale="zh_Hans">
+      <string original="Preview">预览</string>
+      <string original="Calibrate">校准</string>
+      <string original="Spectrum">频谱</string>
+      <string original="1 Camera">1 相机</string>
+      <string original="Set up your camera">设置你的相机</string>
+      <string original="2 Calibration">2 校准</string>
+      <string original="Calibration 1">校准 1</string>
+      <string original="Wavelength in nm">波长 (nm)</string>
+      <string original="Calibration 2">校准 2</string>
+      <string original="Pixel 1">像素 1</string>
+      <string original="Wavelength 1">波长 1</string>
+      <string original="Pixel 2">像素 2</string>
+      <string original="Wavelength 2">波长 2</string>
+      <string original="3 Spectrum">3 频谱</string>
+      <category>相机</category>
+      <string original="Calibration data">校准数据</string>
+      <string original="In this tab you can calibrate your spectrum">在此标签页，你可以校准频谱</string>
+      <string original="Raw Spectrum">原始频谱</string>
+      <string original="Position on sensor">传感器上的位置</string>
+    </translation>
+    <translation locale="zh_Hant">
+      <string original="Calibrate">校正</string>
+      <string original="Spectrum">加速頻譜</string>
+    </translation>
+    <translation locale="bn"/>
+    <translation locale="gu">
+      <string original="Preview">પૂર્વાવલોકન</string>
+      <string original="Calibrate">કેલીબ્રેટ</string>
+      <string original="Spectrum">સ્પેક્ટ્રમ</string>
+      <title>સ્પેક્ટ્રોસ્કોપી</title>
+      <category>કેમેરા</category>
+      <description>સ્પેક્ટ્રોસ્કોપી માટે બાહ્ય વિવર્તન ગ્રેટિંગનો ઉપયોગ કરો. જો તમારી પાસે સમર્પિત વિવર્તન ગ્રેટિંગ ન હોય, તો CD અથવા DVD નો એક ભાગ પણ કામ કરશે. તમારા પ્રયોગને એવી રીતે સેટ કરો કે કેમેરા વિવર્તનનો મેઘધનુષ્ય જોઈ શકે અને phyphoxમાં પસંદ કરો કે વિવર્તન આડું થાય છે કે ઊભી રીતે. phyphox કેમેરા છબીના પસંદ કરેલા વિસ્તારમાં સમાન તરંગલંબાઇમાંથી યોગદાનને સરેરાશ કરશે. તમે તમારા સ્પેક્ટ્રમને પણ માપાંકિત કરી શકો છો.</description>
+      <string original="Calibration data">કેલિબ્રેશન ડેટા</string>
+      <string original="1 Camera">1 કેમેરા</string>
+      <string original="Set up your camera">તમારો કેમેરા સેટ કરો</string>
+      <string original="Use a diffraction grating and align your phone's camera on a tripod such that it can see the generated rainbow. Tap the preview image and drag the handles of the highlighted rectangle to select only the rainbow. Make sure its color bands are either perfectly horizontal or vertical and select the spectrum orientation accordingly. Then move on to tab 2.">ડિફ્રેક્શન ગ્રેટિંગનો ઉપયોગ કરો અને તમારા ફોનના કેમેરાને ટ્રાઇપોડ પર એવી રીતે ગોઠવો કે તે જનરેટ થયેલ મેઘધનુષ્ય જોઈ શકે. પ્રિવ્યૂ છબીને ટેપ કરો અને ફક્ત મેઘધનુષ્ય પસંદ કરવા માટે હાઇલાઇટ કરેલા લંબચોરસના હેન્ડલ્સને ખેંચો. ખાતરી કરો કે તેના રંગ પટ્ટા સંપૂર્ણપણે આડા અથવા ઊભા છે અને તે મુજબ સ્પેક્ટ્રમ ઓરિએન્ટેશન પસંદ કરો. પછી ટેબ 2 પર જાઓ.</string>
+      <string original="2 Calibration">2 કેલીબ્રેશન</string>
+      <string original="In this tab you can calibrate your spectrum">આ ટેબમાં તમે તમારા સ્પેક્ટ્રમને કેલિબ્રેટ કરી શકો છો</string>
+      <string original="Raw Spectrum">રો સ્પેક્ટ્રમ</string>
+      <string original="Position on sensor">સેન્સર પર સ્થિતિ</string>
+      <string original="Calibration 1">કેલીબ્રેશન 1</string>
+      <string original="Wavelength in nm">nmમાં તરંગલંબાઇ</string>
+      <string original="Calibration 2">કેલીબ્રેશન 2</string>
+      <string original="Pixel 1">પિકસેલ 1</string>
+      <string original="Wavelength 1">તરંગલંબાઇ 1</string>
+      <string original="Pixel 2">પિકસેલ 2</string>
+      <string original="Wavelength 2">તરંગલંબાઇ 2</string>
+      <string original="Using a known light source, you can tap the graph, select the calibrate mode at the bottom and pick peaks to match them with knwon wavelengths. You can then see the calibrated spectrum on tab 3.">જાણીતા પ્રકાશ સ્ત્રોતનો ઉપયોગ કરીને, તમે ગ્રાફને ટેપ કરી શકો છો, તળિયે કેલિબ્રેટ મોડ પસંદ કરી શકો છો અને નોન તરંગલંબાઇ સાથે મેચ કરવા માટે શિખરો પસંદ કરી શકો છો. પછી તમે ટેબ 3 પર કેલિબ્રેટેડ સ્પેક્ટ્રમ જોઈ શકો છો.</string>
+      <string original="3 Spectrum">3 સ્પેક્ટ્રમ</string>
+      <string original="After calibrating your spectrometer in tab 2, you can see your calibrated spectrum here.">ટેબ 2 માં તમારા સ્પેક્ટ્રોમીટરને કેલિબ્રેટ કર્યા પછી, તમે અહીં તમારા કેલિબ્રેટ સ્પેક્ટ્રમને જોઈ શકો છો.</string>
+      <string original="Note that your phone's camera uses filters to capture red, green and blue components. The resulting relative luminance depends on the wavelength, so the intensity of different wavelengths is not comparable in this spectrum.">નોંધ કરો કે તમારા ફોનનો કેમેરા લાલ, લીલો અને વાદળી ઘટકોને કેપ્ચર કરવા માટે ફિલ્ટર્સનો ઉપયોગ કરે છે. પરિણામી સંબંધિત તેજ તરંગલંબાઇ પર આધાર રાખે છે, તેથી આ સ્પેક્ટ્રમમાં વિવિધ તરંગલંબાઇઓની તીવ્રતા તુલનાત્મક નથી.</string>
+    </translation>
+    <translation locale="kn"/>
+    <translation locale="or"/>
+    <translation locale="ko">
+      <title>분광학</title>
+      <category>카메라</category>
+      <description>분광을 위해 외부 회절 격자를 사용합니다. 전용 회절 격자가 없다면 CD나 DVD의 일부를 사용해도 됩니다. 카메라가 회절된 무지개를 볼 수 있도록 실험을 설치하고, phyphox에서 회절이 가로로 발생하는지 세로로 발생하는지 선택하세요. phyphox는 카메라 이미지의 선택한 영역에서 동일한 파장의 기여도를 평균화합니다. 스펙트럼을 보정할 수도 있습니다.</description>
+      <string original="Calibration data">보정 데이터</string>
+      <string original="1 Camera">1 카메라</string>
+      <string original="Set up your camera">카메라 설정</string>
+      <string original="Preview">미리보기</string>
+      <string original="Use a diffraction grating and align your phone's camera on a tripod such that it can see the generated rainbow. Tap the preview image and drag the handles of the highlighted rectangle to select only the rainbow. Make sure its color bands are either perfectly horizontal or vertical and select the spectrum orientation accordingly. Then move on to tab 2.">회절 격자를 사용하고, 생성된 무지개가 보이도록 삼각대에 휴대폰 카메라를 맞추세요. 미리보기 이미지를 탭하고 강조 표시된 사각형의 핸들을 드래그하여 무지개 영역만 선택합니다. 색상 띠가 완벽하게 가로 또는 세로인지 확인하고 그에 따라 스펙트럼 방향을 선택하세요. 그런 다음 2번 탭으로 이동하세요.</string>
+      <string original="2 Calibration">2 보정</string>
+      <string original="In this tab you can calibrate your spectrum">이 탭에서 스펙트럼을 보정할 수 있습니다</string>
+      <string original="Raw Spectrum">보정 전 스펙트럼</string>
+      <string original="Position on sensor">센서상 위치</string>
+      <string original="Calibrate">보정</string>
+      <string original="Calibration 1">보정 1</string>
+      <string original="Wavelength in nm">파장 (nm 단위)</string>
+      <string original="Calibration 2">보정 2</string>
+      <string original="Pixel 1">픽셀 1</string>
+      <string original="Wavelength 1">파장 1</string>
+      <string original="Pixel 2">픽셀 2</string>
+      <string original="Wavelength 2">파장 2</string>
+      <string original="Using a known light source, you can tap the graph, select the calibrate mode at the bottom and pick peaks to match them with knwon wavelengths. You can then see the calibrated spectrum on tab 3.">알려진 광원을 사용하여 그래프를 탭하고, 하단의 보정 모드를 선택한 후 피크(peak)를 골라 알려진 파장과 맞출 수 있습니다. 보정된 스펙트럼은 3번 탭에서 확인할 수 있습니다.</string>
+      <string original="3 Spectrum">3 스펙트럼</string>
+      <string original="After calibrating your spectrometer in tab 2, you can see your calibrated spectrum here.">2번 탭에서 분광기를 보정한 후, 여기에서 보정된 스펙트럼을 확인할 수 있습니다.</string>
+      <string original="Spectrum">스펙트럼</string>
+      <string original="Note that your phone's camera uses filters to capture red, green and blue components. The resulting relative luminance depends on the wavelength, so the intensity of different wavelengths is not comparable in this spectrum.">휴대폰 카메라 필터는 빨간색, 초록색, 파란색 성분을 포착하도록 되어 있습니다. 그 결과 발생하는 상대 휘도는 파장에 따라 달라지므로, 이 스펙트럼에서는 서로 다른 파장의 세기를 직접 비교할 수 없습니다.</string>
+    </translation>
+  </translations>
+  <data-containers>
+    <container size="0">spectrum_raw_x</container>
+    <container size="0">spectrum_raw_y</container>
+    <container size="0">spectrum_cal_x</container>
+    <container size="1" clearGroup="Calibration data">cal_x1</container>
+    <container size="1" clearGroup="Calibration data">cal_x2</container>
+    <container size="1" clearGroup="Calibration data">cal_lambda1</container>
+    <container size="1" clearGroup="Calibration data">cal_lambda2</container>
+  </data-containers>
+  <input>
+    <camera auto_exposure="true" feature="spectroscopy" x1="0.4" x2="0.6" y1="0.4" y2="0.6" aeStrategy="avoidOverexposure" locked="focus_distance=0">
+      <output component="pixelPosition">spectrum_raw_x</output>
+      <output component="luminance">spectrum_raw_y</output>
+    </camera>
+  </input>
+  <views>
+    <view label="1 Camera">
+      <separator height="1"/>
+      <info bold="true" align="center" label="Set up your camera"/>
+      <separator height="1"/>
+      <camera-gui label="Preview" exposure_adjustment_level="3"/>
+      <info label="Use a diffraction grating and align your phone's camera on a tripod such that it can see the generated rainbow. Tap the preview image and drag the handles of the highlighted rectangle to select only the rainbow. Make sure its color bands are either perfectly horizontal or vertical and select the spectrum orientation accordingly. Then move on to tab 2."/>
+    </view>
+    <view label="2 Calibration">
+      <separator height="1"/>
+      <info bold="true" label="In this tab you can calibrate your spectrum"/>
+      <separator height="1"/>
+      <graph label="Raw Spectrum" labelX="Position on sensor" labelY="[[quantity_short_luminance]]" unitX="Pixel" pickLabel="Calibrate">
+        <input axis="x">spectrum_raw_x</input>
+        <input axis="y">spectrum_raw_y</input>
+        <output axis="x" label="Calibration 1">cal_x1</output>
+        <output axis="xcal" label="Wavelength in nm">cal_lambda1</output>
+        <output axis="x" label="Calibration 2">cal_x2</output>
+        <output axis="xcal" label="Wavelength in nm">cal_lambda2</output>
+      </graph>
+      <separator height="1"/>
+      <info label="Calibration data"/>
+      <value label="Pixel 1">
+        <input>cal_x1</input>
+      </value>
+      <value label="Wavelength 1" unit="nm">
+        <input>cal_lambda1</input>
+      </value>
+      <value label="Pixel 2">
+        <input>cal_x2</input>
+      </value>
+      <value label="Wavelength 2" unit="nm">
+        <input>cal_lambda2</input>
+      </value>
+      <info label="Using a known light source, you can tap the graph, select the calibrate mode at the bottom and pick peaks to match them with knwon wavelengths. You can then see the calibrated spectrum on tab 3."/>
+    </view>
+    <view label="3 Spectrum">
+      <separator height="1"/>
+      <info bold="true" label="After calibrating your spectrometer in tab 2, you can see your calibrated spectrum here."/>
+      <separator height="1"/>
+      <graph label="Spectrum" labelX="[[quantity_short_wavelength]]" unitX="[[unit_short_nano_meter]]" labelY="[[quantity_short_luminance]]">
+        <input axis="x">spectrum_cal_x</input>
+        <input axis="y">spectrum_raw_y</input>
+      </graph>
+      <info label="Note that your phone's camera uses filters to capture red, green and blue components. The resulting relative luminance depends on the wavelength, so the intensity of different wavelengths is not comparable in this spectrum."/>
+    </view>
+  </views>
+  <analysis>
+    <formula formula="([1_]-[2])*([5]-[3])/([4]-[2])+[3]">
+      <input keep="true">spectrum_raw_x</input>
+      <input keep="true">cal_x1</input>
+      <input keep="true">cal_lambda1</input>
+      <input keep="true">cal_x2</input>
+      <input keep="true">cal_lambda2</input>
+      <output>spectrum_cal_x</output>
+    </formula>
+  </analysis>
+  <export>
+    <set name="Raw Data">
+      <data name="Pixel position">spectrum_raw_x</data>
+      <data name="Wavelength (nm)">spectrum_cal_x</data>
+      <data name="Relative Luminance">spectrum_raw_y</data>
+    </set>
+    <set name="Calibration">
+      <data name="Pixel 1">cal_x1</data>
+      <data name="Wavelength 1">cal_lambda1</data>
+      <data name="Pixel 2">cal_x2</data>
+      <data name="Wavelength 2">cal_lambda2</data>
+    </set>
+  </export>
+</phyphox>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phyphox version="1.20" locale="zh-CN">
+  <title>公式计算工作台</title><category>本地计算样例</category>
+  <description>输入数值并计算平方。此样例只进行真实的本地数学计算，不采集或模拟外部设备数据。</description>
+  <data-containers><container size="1" init="2">x</container><container size="1">square</container></data-containers>
+  <analysis onUserInput="true"><formula formula="[1]^2"><input keep="true">x</input><output>square</output></formula></analysis>
+  <views><view label="计算"><info label="纯计算样例 · 无设备采集"/><edit label="输入 x" default="2" signed="true" decimal="true"><output>x</output></edit><value label="x²" precision="4"><input>square</input></value></view></views>
+  <export><set name="Calculation"><data name="x">x</data><data name="x squared">square</data></set></export>
+</phyphox>

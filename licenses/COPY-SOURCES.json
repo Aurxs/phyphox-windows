@@ -1,0 +1,77 @@
+[
+  {
+    "file": "dotnet-runtime-LICENSE.txt",
+    "copiedFrom": "/private/tmp/phyphox-nuget/microsoft.netcore.app.runtime.win-x64/10.0.12/LICENSE.TXT",
+    "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b"
+  },
+  {
+    "file": "dotnet-runtime-third-party-LICENSE.txt",
+    "copiedFrom": "/private/tmp/phyphox-nuget/microsoft.netcore.app.runtime.win-x64/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "aspnetcore-runtime-LICENSE.txt",
+    "copiedFrom": "/private/tmp/phyphox-nuget/microsoft.aspnetcore.app.runtime.win-x64/10.0.12/LICENSE.txt",
+    "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b"
+  },
+  {
+    "file": "aspnetcore-runtime-third-party-LICENSE.txt",
+    "copiedFrom": "/private/tmp/phyphox-nuget/microsoft.aspnetcore.app.runtime.win-x64/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "307d014f65d8482314f1400ddeae7a0cbabb96c2207bcc77f6233cc10588e5d9"
+  },
+  {
+    "file": "dotnet-apphost-LICENSE.txt",
+    "copiedFrom": "/private/tmp/phyphox-nuget/microsoft.netcore.app.host.win-x64/10.0.12/LICENSE.TXT",
+    "sha256": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b"
+  },
+  {
+    "file": "dotnet-apphost-third-party-LICENSE.txt",
+    "copiedFrom": "/private/tmp/phyphox-nuget/microsoft.netcore.app.host.win-x64/10.0.12/THIRD-PARTY-NOTICES.TXT",
+    "sha256": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21"
+  },
+  {
+    "file": "windowsdesktop-runtime-LICENSE.txt",
+    "copiedFrom": "/private/tmp/phyphox-nuget/microsoft.windowsdesktop.app.runtime.win-x64/10.0.12/LICENSE",
+    "sha256": "a89886665765362eb77e0f8e26602c924520041d1711b2eedc136434fe4d01ab"
+  },
+  {
+    "file": "React-LICENSE.txt",
+    "copiedFrom": "phyphox-windows/web/node_modules/react/LICENSE",
+    "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  },
+  {
+    "file": "ReactDOM-LICENSE.txt",
+    "copiedFrom": "phyphox-windows/web/node_modules/react-dom/LICENSE",
+    "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  },
+  {
+    "file": "Scheduler-LICENSE.txt",
+    "copiedFrom": "phyphox-windows/web/node_modules/scheduler/LICENSE",
+    "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  },
+  {
+    "file": "NAudio-LICENSE.txt",
+    "copiedFrom": "phyphox-windows/src/Phyphox.Media/NAudio-LICENSE.txt",
+    "sha256": "303e01786b271eb464b3f43d18a375f2f17d37bc708a37c2fdf45b289fb5bfaa"
+  },
+  {
+    "file": "MQTTnet-LICENSE.txt",
+    "copiedFrom": "phyphox-windows/src/Phyphox.Network/MQTTnet.LICENSE.txt",
+    "sha256": "dafb7de77796bf6adf2544f7b27560f41b11b5be4391b2324e5a6fb335888ecd"
+  },
+  {
+    "file": "OpenCV-LICENSE.txt",
+    "copiedFrom": "phyphox-windows/src/Phyphox.Camera/licenses/OpenCV-LICENSE.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "file": "OpenCvSharp-LICENSE.txt",
+    "copiedFrom": "phyphox-windows/src/Phyphox.Camera/licenses/OpenCvSharp-LICENSE.txt",
+    "sha256": "93a73400a67ba64071d073386c96b21da8d8265574de0c71520061f741b0d645"
+  },
+  {
+    "file": "phyphox-android-GPL3-LICENSE.txt",
+    "copiedFrom": "official-reference/phyphox-android/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  }
+]

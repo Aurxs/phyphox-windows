@@ -1,0 +1,63 @@
+{
+  "loaded": {
+    "title": "声音频谱",
+    "inputs": [
+      {
+        "index": 0,
+        "type": "audio",
+        "outputs": [
+          "recording",
+          "rate"
+        ]
+      }
+    ]
+  },
+  "before": {
+    "counts": {
+      "gum": 0,
+      "audioContexts": 0,
+      "configure": 0
+    },
+    "inputValue": "0"
+  },
+  "denied": {
+    "counts": {
+      "gum": 1,
+      "audioContexts": 0,
+      "configure": 0
+    },
+    "alert": "麦克风: QA: permission explicitly denied (scripted refusal, no physical access)",
+    "streams": 0
+  },
+  "resources": {
+    "status": 200,
+    "type": "text/javascript",
+    "worklet": true,
+    "csp": "default-src 'self'; img-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'"
+  },
+  "hidden": {
+    "sameElement": true,
+    "hidden": true,
+    "counts": {
+      "gum": 1,
+      "audioContexts": 0,
+      "configure": 0
+    }
+  },
+  "returned": {
+    "sameElement": true,
+    "hidden": false,
+    "counts": {
+      "gum": 1,
+      "audioContexts": 0,
+      "configure": 0
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "overflow": false
+  },
+  "scope": "Isolated headless Chromium / localhost:37653; no physical capture or playback",
+  "permissionTest": "Scripted NotAllowedError denial; not an OS permission-dialog test"
+}

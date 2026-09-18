@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework Condition="$([System.String]::Copy('$(RuntimeIdentifier)').StartsWith('win-'))">net10.0-windows10.0.19041.0</TargetFramework>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <AssemblyName>Phyphox.Server</AssemblyName>
+    <RootNamespace>Phyphox.Server</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Phyphox.Core/Phyphox.Core.csproj" />
+    <ProjectReference Include="../Phyphox.Devices/Phyphox.Devices.csproj" />
+    <ProjectReference Include="../Phyphox.Media/Phyphox.Media.csproj" />
+    <ProjectReference Include="../Phyphox.Camera/Phyphox.Camera.csproj" />
+    <ProjectReference Include="../Phyphox.Network/Phyphox.Network.csproj" />
+    <ProjectReference Include="../Phyphox.Storage/Phyphox.Storage.csproj" />
+    <ProjectReference Include="../Phyphox.Devices.Windows/Phyphox.Devices.Windows.csproj" Condition="$([System.String]::Copy('$(RuntimeIdentifier)').StartsWith('win-'))" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="../../web/dist/**/*" Link="wwwroot/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="../../assets/**/*" Link="assets/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <!-- These three notices are already contributed by the Media/Camera projects. -->
+    <Content Include="../../licenses/**/*" Exclude="../../licenses/NAudio-LICENSE.txt;../../licenses/OpenCV-LICENSE.txt;../../licenses/OpenCvSharp-LICENSE.txt" Link="licenses/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

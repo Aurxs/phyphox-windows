@@ -1,0 +1,81 @@
+{
+    "timestamp":  "2026-09-18T12:23:02.3734333Z",
+    "os":  "Microsoft Windows NT 10.0.26200.0",
+    "osArchitecture":  "ARM64",
+    "powershellVersion":  "5.1.26100.8653",
+    "user":  "AURXS7353\\aurxs",
+    "elevated":  false,
+    "processorCount":  4,
+    "dotnetOnPath":  false,
+    "programDirectory":  "C:\\Users\\aurxs\\AppData\\Local\\Temp\\phyphox-final-e06cb7b518274b20a541eae82001e446\\portable",
+    "checks":  [
+                   "self-contained startup",
+                   "offline web entry",
+                   "library / formula / start / pause / stop",
+                   "CSV / XLSX / state exports",
+                   "journal replay / snapshot save and paused restore",
+                   "camera native DLL loaded without activating hardware"
+               ],
+    "physicalDevices":  "not tested",
+    "performance":  "not tested",
+    "portableData":  false,
+    "health":  {
+                   "version":  "0.1.0-dev",
+                   "platform":  "Microsoft Windows 10.0.26200",
+                   "processArchitecture":  "X64",
+                   "osArchitecture":  "Arm64",
+                   "processorCount":  4,
+                   "formatVersion":  "1.20",
+                   "verification":  {
+                                        "hardware":  "notExecuted",
+                                        "performance":  "notExecuted",
+                                        "note":  "See supplied validation records for tested build/environment."
+                                    },
+                   "portable":  true
+               },
+    "serverAssemblySha256":  "E95A071071F293BED3B01EAB796C0F7717447BE0B67DE3646668F7F17E42EB6D",
+    "cameraBackend":  {
+                          "version":  "4.13.0",
+                          "buildInformation":  "\nGeneral configuration for OpenCV 4.13.0 =====================================\n  Version control:               fe38fc6\n\n  Extra modules:\n    Location (extra):            D:/a/opencvsharp/opencvsharp/opencv_contrib/modules\n    Version control (extra):     d99ad2a\n\n  Platform:\n    Timestamp:                   2026-06-27T02:28:43Z\n    Host:                        Windows 10.0.26100 AMD64\n    CMake:                       4.3.4\n    CMake generator:             Visual Studio 18 2026\n    CMake build tool:            C:/Program Files/Microsoft Visual Studio/18/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe\n    MSVC:                        1951\n    Configuration:               Debug Release\n    Algorithm Hint:              ALGO_HINT_ACCURATE\n\n  CPU/HW features:\n    Baseline:                    SSE SSE2 SSE3\n      requested:                 SSE3\n    Dispatched code generation:  SSE4_1 SSE4_2 AVX FP16 AVX2 AVX512_SKX\n      SSE4_1 (15 files):         + SSSE3 SSE4_1\n      SSE4_2 (1 files):          + SSSE3 SSE4_1 POPCNT SSE4_2\n      AVX (9 files):             + SSSE3 SSE4_1 POPCNT SSE4_2 AVX\n      FP16 (0 files):            + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16\n      AVX2 (35 files):           + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16 AVX2 FMA3\n      AVX512_SKX (7 files):      + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16 AVX2 FMA3 AVX_512F AVX512_COMMON AVX512_SKX\n\n  C/C++:\n    Built as dynamic libs?:      NO\n    C++ standard:                11\n    C++ Compiler:                C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe  (ver 19.51.36248.0)\n    C++ flags (Release):         /DWIN32 /D_WINDOWS /W4 /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /GS /sdl /guard:cf /w34018 /w34146 /w34244 /w34267 /w34302 /w34308 /w34509 /w34532 /w34533 /w34700 /w34789 /w34995 /w34996 /MP  /O2 /Ob2 /DNDEBUG \n    C++ flags (Debug):           /DWIN32 /D_WINDOWS /W4 /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /GS /sdl /guard:cf /w34018 /w34146 /w34244 /w34267 /w34302 /w34308 /w34509 /w34532 /w34533 /w34700 /w34789 /w34995 /w34996 /MP  /Zi /Ob0 /Od /RTC1 \n    C Compiler:                  C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe\n    C flags (Release):           /DWIN32 /D_WINDOWS /W3  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /GS /sdl /guard:cf /w34018 /w34146 /w34244 /w34267 /w34302 /w34308 /w34509 /w34532 /w34533 /w34700 /w34789 /w34995 /w34996 /MP   /O2 /Ob2 /DNDEBUG \n    C flags (Debug):             /DWIN32 /D_WINDOWS /W3  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /Oi  /fp:precise    /GS /sdl /guard:cf /w34018 /w34146 /w34244 /w34267 /w34302 /w34308 /w34509 /w34532 /w34533 /w34700 /w34789 /w34995 /w34996 /MP /Zi /Ob0 /Od /RTC1 \n    Linker flags (Release):      /machine:x64   /guard:cf /dynamicbase /NODEFAULTLIB:atlthunk.lib /INCREMENTAL:NO  /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:libcpmtd.lib /NODEFAULTLIB:msvcrtd.lib\n    Linker flags (Debug):        /machine:x64   /guard:cf /dynamicbase /NODEFAULTLIB:atlthunk.lib /debug /INCREMENTAL  /NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:libcpmt.lib /NODEFAULTLIB:msvcrt.lib\n    ccache:                      NO\n    Precompiled headers:         YES\n    Extra dependencies:          comctl32 gdi32 ole32 setupapi ws2_32 D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/jpeg.lib D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/libwebpdecoder.lib D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/libwebp.lib D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/libwebpdemux.lib D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/libwebpmux.lib D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/libsharpyuv.lib D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/libpng16.lib D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/tiff.lib openjp2 D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/zlib.lib\n    3rdparty dependencies:       ittnotify libprotobuf IlmImf ipphal ippiw ippicv\n\n  OpenCV modules:\n    To be built:                 aruco bgsegm calib3d core dnn dnn_superres face features2d flann hfs highgui img_hash imgcodecs imgproc line_descriptor ml objdetect optflow phase_unwrapping photo plot quality rgbd saliency shape signal stitching superres text tracking video videoio wechat_qrcode xfeatures2d ximgproc xobjdetect xphoto\n    Disabled:                    bioinspired ccalib datasets dnn_objdetect dpm fuzzy intensity_transform java_bindings_generator js_bindings_generator mcc objc_bindings_generator python_bindings_generator python_tests rapid reg stereo structured_light surface_matching videostab world\n    Disabled by dependency:      -\n    Unavailable:                 alphamat cannops cudaarithm cudabgsegm cudacodec cudafeatures2d cudafilters cudaimgproc cudalegacy cudaobjdetect cudaoptflow cudastereo cudawarping cudev cvv fastcv freetype gapi hdf java julia matlab ovis python2 python3 sfm ts viz\n    Applications:                -\n    Documentation:               NO\n    Non-free algorithms:         YES\n\n  Windows RT support:            NO\n\n  GUI:                           WIN32UI\n    Win32 UI:                    YES\n    VTK support:                 NO\n\n  Media I/O: \n    ZLib:                        D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/zlib.lib (ver 1.3.1)\n    JPEG:                        D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/jpeg.lib (ver 70)\n    WEBP:                        D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/libwebp.lib (ver 1.6.0)\n    AVIF:                        NO\n    PNG:                         D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/libpng16.lib (ver 1.6.55)\n    TIFF:                        D:/a/opencvsharp/opencvsharp/vcpkg_installed/x64-windows-static/lib/tiff.lib (ver 42 / 4.7.1)\n    JPEG 2000:                   OpenJPEG (ver 2.5.3)\n    OpenEXR:                     build (ver 2.3.0)\n    GIF:                         YES\n    HDR:                         YES\n    SUNRASTER:                   YES\n    PXM:                         YES\n    PFM:                         YES\n\n  Video I/O:\n    FFMPEG:                      YES (prebuilt binaries)\n      avcodec:                   YES (58.134.100)\n      avformat:                  YES (58.76.100)\n      avutil:                    YES (56.70.100)\n      swscale:                   YES (5.9.100)\n      avdevice:                  NO\n    DirectShow:                  YES\n    Media Foundation:            YES\n      DXVA:                      YES\n    Orbbec:                      YES\n\n  Parallel framework:            Concurrency\n\n  Trace:                         YES (with Intel ITT(3.25.4))\n\n  Other third-party libraries:\n    Intel IPP:                   2022.2.0 [2022.2.0]\n           at:                   D:/a/opencvsharp/opencvsharp/opencv/build/3rdparty/ippicv/ippicv_win/icv\n    Intel IPP IW:                sources (2022.2.0)\n              at:                D:/a/opencvsharp/opencvsharp/opencv/build/3rdparty/ippicv/ippicv_win/iw\n    Lapack:                      NO\n    Eigen:                       NO\n    Custom HAL:                  YES (ipp (ver 0.0.1))\n    Protobuf:                    build (3.19.1)\n    Flatbuffers:                 builtin/3rdparty (25.9.23)\n\n  OpenCL:                        YES (NVD3D11)\n    Include path:                D:/a/opencvsharp/opencvsharp/opencv/3rdparty/include/opencl/1.2\n    Link libraries:              Dynamic load\n\n  Python (for build):            C:/hostedtoolcache/windows/Python/3.12.10/x64/python3.exe\n\n  Install to:                    D:/a/opencvsharp/opencvsharp/opencv_artifacts\n-----------------------------------------------------------------\n\n",
+                          "backend":  "MSMF",
+                          "deviceOpened":  false,
+                          "hardwareVerified":  false
+                      },
+    "devices":  {
+                    "items":  [
+
+                              ],
+                    "connections":  [
+
+                                    ],
+                    "capabilities":  [
+                                         {
+                                             "kind":  "serial",
+                                             "status":  "implementedUnverified",
+                                             "reason":  "传输层已实现；需要真实设备协议与独立验收，未验证硬件兼容。"
+                                         },
+                                         {
+                                             "kind":  "hid",
+                                             "status":  "implementedUnverified",
+                                             "reason":  "传输层已实现；需要真实设备协议与独立验收，未验证硬件兼容。"
+                                         },
+                                         {
+                                             "kind":  "ble",
+                                             "status":  "implementedUnverified",
+                                             "reason":  "传输层已实现；需要真实设备协议与独立验收，未验证硬件兼容。"
+                                         },
+                                         {
+                                             "kind":  "audio",
+                                             "status":  "implementedUnverified",
+                                             "reason":  "WASAPI 已实现；循环播放与采集已接入，非循环输出时序尚未完成，设备未验收。"
+                                         },
+                                         {
+                                             "kind":  "camera",
+                                             "status":  "partialUnverified",
+                                             "reason":  "MSMF 采集与图像分析已实现；需明确相机配置与曝光条件，设备未验收。"
+                                         }
+                                     ]
+                },
+    "status":  "passed",
+    "logsDirectory":  "C:\\Users\\aurxs\\AppData\\Local\\Temp\\phyphox-check-ea04d3459c844e00af7f9a02b6413d10"
+}

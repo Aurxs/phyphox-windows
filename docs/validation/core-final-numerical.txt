@@ -1,0 +1,5 @@
+﻿Focused input-alias consumption and official saved-state timing restoration: passed.
+Focused clear-group protection: passed.
+Focused arbitrary-length FFT and Heaviside boundary: passed.
+Focused lifecycle, requireFill threshold, formula arity, and XML DTD rejection: passed.
+Official golden vectors: passed=117, failed=0, explicitly blocked=0. Blocked is NOT passed.

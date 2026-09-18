@@ -1,0 +1,4711 @@
+[
+  {
+    "name": "phyphox",
+    "children": [
+      "title",
+      "state-title",
+      "category",
+      "icon",
+      "color",
+      "description",
+      "link",
+      "translations",
+      "data-containers",
+      "input",
+      "output",
+      "analysis",
+      "views",
+      "export",
+      "network",
+      "events"
+    ],
+    "attributes": [
+      {
+        "name": "version",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "locale",
+        "type": "string"
+      },
+      {
+        "name": "isLink",
+        "type": "boolean"
+      },
+      {
+        "name": "appleBan",
+        "type": "boolean"
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "title",
+    "parent": "phyphox",
+    "required": "base-locale",
+    "attributes": [
+
+    ],
+    "block": "root"
+  },
+  {
+    "name": "state-title",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "block": "root"
+  },
+  {
+    "name": "category",
+    "parent": "phyphox",
+    "required": "base-locale",
+    "attributes": [
+
+    ],
+    "block": "root"
+  },
+  {
+    "name": "icon",
+    "parent": "phyphox",
+    "attributes": [
+      {
+        "name": "format",
+        "type": "enum",
+        "values": [
+          "string",
+          "base64"
+        ]
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "color",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "block": "root"
+  },
+  {
+    "name": "description",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "block": "root"
+  },
+  {
+    "name": "link",
+    "parent": "phyphox",
+    "attributes": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "highlight",
+        "type": "boolean"
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "translations",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "children": [
+      "translation"
+    ],
+    "block": "root"
+  },
+  {
+    "name": "translation",
+    "parent": "translations",
+    "children": [
+      "title",
+      "category",
+      "description",
+      "link",
+      "string"
+    ],
+    "attributes": [
+      {
+        "name": "locale",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "string",
+    "parent": "translation",
+    "attributes": [
+      {
+        "name": "original",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "title",
+    "parent": "translation",
+    "attributes": [
+
+    ],
+    "block": "root"
+  },
+  {
+    "name": "category",
+    "parent": "translation",
+    "attributes": [
+
+    ],
+    "block": "root"
+  },
+  {
+    "name": "description",
+    "parent": "translation",
+    "attributes": [
+
+    ],
+    "block": "root"
+  },
+  {
+    "name": "link",
+    "parent": "translation",
+    "attributes": [
+      {
+        "name": "label",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "name": "translation",
+        "type": "string"
+      },
+      {
+        "name": "highlight",
+        "type": "boolean"
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "data-containers",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "children": [
+      "container"
+    ],
+    "block": "root"
+  },
+  {
+    "name": "container",
+    "parent": "data-containers",
+    "attributes": [
+      {
+        "name": "size",
+        "type": "integer"
+      },
+      {
+        "name": "init",
+        "type": "float-list"
+      },
+      {
+        "name": "static",
+        "type": "boolean"
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [
+          "buffer"
+        ]
+      },
+      {
+        "name": "clearGroup",
+        "type": "string"
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "export",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "children": [
+      "set"
+    ],
+    "block": "root"
+  },
+  {
+    "name": "set",
+    "parent": "export",
+    "children": [
+      "data"
+    ],
+    "attributes": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "data",
+    "parent": "set",
+    "attributes": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "events",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "children": [
+      "start",
+      "pause"
+    ],
+    "block": "root"
+  },
+  {
+    "name": "start",
+    "parent": "events",
+    "attributes": [
+      {
+        "name": "experimentTime",
+        "type": "float"
+      },
+      {
+        "name": "systemTime",
+        "type": "string"
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "pause",
+    "parent": "events",
+    "attributes": [
+      {
+        "name": "experimentTime",
+        "type": "float"
+      },
+      {
+        "name": "systemTime",
+        "type": "string"
+      }
+    ],
+    "block": "root"
+  },
+  {
+    "name": "input",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "children": [
+      "sensor",
+      "audio",
+      "location",
+      "depth",
+      "camera",
+      "bluetooth"
+    ],
+    "block": "input"
+  },
+  {
+    "name": "sensor",
+    "parent": "input",
+    "children": [
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "type",
+        "type": "enum",
+        "required": true,
+        "values": [
+          "accelerometer",
+          "linear_acceleration",
+          "gravity",
+          "gyroscope",
+          "magnetic_field",
+          "pressure",
+          "light",
+          "proximity",
+          "temperature",
+          "humidity",
+          "attitude",
+          "custom"
+        ]
+      },
+      {
+        "name": "rate",
+        "type": "float"
+      },
+      {
+        "name": "rateStrategy",
+        "type": "enum",
+        "values": [
+          "auto",
+          "request",
+          "generate",
+          "limit"
+        ]
+      },
+      {
+        "name": "average",
+        "type": "boolean"
+      },
+      {
+        "name": "stride",
+        "type": "integer"
+      },
+      {
+        "name": "ignoreUnavailable",
+        "type": "boolean"
+      },
+      {
+        "name": "preferUncalibrated",
+        "type": "boolean"
+      },
+      {
+        "name": "nameFilter",
+        "type": "string"
+      },
+      {
+        "name": "typeFilter",
+        "type": "integer"
+      }
+    ],
+    "outputs": {
+      "attribute": "component",
+      "required_component": true,
+      "components": [
+        {
+          "name": "x"
+        },
+        {
+          "name": "y"
+        },
+        {
+          "name": "z"
+        },
+        {
+          "name": "t"
+        },
+        {
+          "name": "abs"
+        },
+        {
+          "name": "accuracy"
+        }
+      ]
+    },
+    "block": "input"
+  },
+  {
+    "name": "audio",
+    "parent": "input",
+    "children": [
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "rate",
+        "type": "integer"
+      },
+      {
+        "name": "append",
+        "type": "boolean"
+      }
+    ],
+    "outputs": {
+      "attribute": "component",
+      "required_component": false,
+      "components": [
+        {
+          "name": "out",
+          "required": true
+        },
+        {
+          "name": "rate"
+        }
+      ]
+    },
+    "block": "input"
+  },
+  {
+    "name": "location",
+    "parent": "input",
+    "children": [
+      "output"
+    ],
+    "attributes": [
+
+    ],
+    "outputs": {
+      "attribute": "component",
+      "required_component": true,
+      "components": [
+        {
+          "name": "lat"
+        },
+        {
+          "name": "lon"
+        },
+        {
+          "name": "z"
+        },
+        {
+          "name": "zwgs84"
+        },
+        {
+          "name": "v"
+        },
+        {
+          "name": "dir"
+        },
+        {
+          "name": "t"
+        },
+        {
+          "name": "accuracy"
+        },
+        {
+          "name": "zAccuracy"
+        },
+        {
+          "name": "status"
+        },
+        {
+          "name": "satellites"
+        }
+      ]
+    },
+    "block": "input"
+  },
+  {
+    "name": "depth",
+    "parent": "input",
+    "children": [
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "mode",
+        "type": "enum",
+        "values": [
+          "closest",
+          "weighted",
+          "average"
+        ]
+      },
+      {
+        "name": "x1",
+        "type": "float"
+      },
+      {
+        "name": "x2",
+        "type": "float"
+      },
+      {
+        "name": "y1",
+        "type": "float"
+      },
+      {
+        "name": "y2",
+        "type": "float"
+      },
+      {
+        "name": "smooth",
+        "type": "boolean"
+      }
+    ],
+    "outputs": {
+      "attribute": "component",
+      "required_component": false,
+      "components": [
+        {
+          "name": "z",
+          "required": true
+        },
+        {
+          "name": "t"
+        }
+      ]
+    },
+    "block": "input"
+  },
+  {
+    "name": "camera",
+    "parent": "input",
+    "children": [
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "x1",
+        "type": "float"
+      },
+      {
+        "name": "x2",
+        "type": "float"
+      },
+      {
+        "name": "y1",
+        "type": "float"
+      },
+      {
+        "name": "y2",
+        "type": "float"
+      },
+      {
+        "name": "auto_exposure",
+        "type": "boolean"
+      },
+      {
+        "name": "aeStrategy",
+        "type": "enum",
+        "values": [
+          "mean",
+          "avoidOverexposure",
+          "avoidUnderexposure",
+          "prioritizeFramerate"
+        ]
+      },
+      {
+        "name": "aeFPSTarget",
+        "type": "float"
+      },
+      {
+        "name": "locked",
+        "type": "string"
+      },
+      {
+        "name": "feature",
+        "type": "enum",
+        "values": [
+          "photometric",
+          "spectroscopy"
+        ]
+      }
+    ],
+    "outputs": {
+      "attribute": "component",
+      "required_component": true,
+      "components": [
+        {
+          "name": "t"
+        },
+        {
+          "name": "luma"
+        },
+        {
+          "name": "luminance"
+        },
+        {
+          "name": "hue"
+        },
+        {
+          "name": "saturation"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "shutterSpeed"
+        },
+        {
+          "name": "iso"
+        },
+        {
+          "name": "aperture"
+        },
+        {
+          "name": "pixelPosition"
+        }
+      ]
+    },
+    "block": "input"
+  },
+  {
+    "name": "bluetooth",
+    "parent": "input",
+    "children": [
+      "output",
+      "config"
+    ],
+    "attributes": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "uuid",
+        "type": "string"
+      },
+      {
+        "name": "mode",
+        "type": "enum",
+        "required": true,
+        "values": [
+          "notification",
+          "indication",
+          "poll"
+        ]
+      },
+      {
+        "name": "rate",
+        "type": "float"
+      },
+      {
+        "name": "subscribeOnStart",
+        "type": "boolean"
+      },
+      {
+        "name": "autoConnect",
+        "type": "boolean"
+      },
+      {
+        "name": "address",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "mtu",
+        "type": "integer"
+      }
+    ],
+    "block": "input"
+  },
+  {
+    "name": "output",
+    "parent": "bluetooth",
+    "attributes": [
+      {
+        "name": "char",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "extra",
+        "type": "enum",
+        "values": [
+          "time",
+          "none"
+        ]
+      },
+      {
+        "name": "conversion",
+        "type": "enum",
+        "values": [
+          "uInt8",
+          "int8",
+          "uInt16LittleEndian",
+          "uInt16BigEndian",
+          "int16LittleEndian",
+          "int16BigEndian",
+          "uInt24LittleEndian",
+          "uInt24BigEndian",
+          "int24LittleEndian",
+          "int24BigEndian",
+          "uInt32LittleEndian",
+          "uInt32BigEndian",
+          "int32LittleEndian",
+          "int32BigEndian",
+          "float32LittleEndian",
+          "float32BigEndian",
+          "float64LittleEndian",
+          "float64BigEndian",
+          "singleByte",
+          "string",
+          "formattedString"
+        ]
+      },
+      {
+        "name": "offset",
+        "type": "integer"
+      },
+      {
+        "name": "repeating",
+        "type": "integer"
+      },
+      {
+        "name": "length",
+        "type": "integer"
+      },
+      {
+        "name": "decimalPoint",
+        "type": "string"
+      },
+      {
+        "name": "separator",
+        "type": "string"
+      },
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "index",
+        "type": "integer"
+      }
+    ],
+    "block": "input"
+  },
+  {
+    "name": "config",
+    "parent": "bluetooth",
+    "attributes": [
+      {
+        "name": "char",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "conversion",
+        "type": "enum",
+        "values": [
+          "uInt8",
+          "int8",
+          "uInt16LittleEndian",
+          "uInt16BigEndian",
+          "int16LittleEndian",
+          "int16BigEndian",
+          "uInt24LittleEndian",
+          "uInt24BigEndian",
+          "int24LittleEndian",
+          "int24BigEndian",
+          "uInt32LittleEndian",
+          "uInt32BigEndian",
+          "int32LittleEndian",
+          "int32BigEndian",
+          "float32LittleEndian",
+          "float32BigEndian",
+          "float64LittleEndian",
+          "float64BigEndian",
+          "singleByte",
+          "string",
+          "hexadecimal"
+        ],
+        "required": true
+      }
+    ],
+    "block": "input"
+  },
+  {
+    "name": "output",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "children": [
+      "audio",
+      "bluetooth",
+      "flashlight"
+    ],
+    "block": "output"
+  },
+  {
+    "name": "audio",
+    "parent": "output",
+    "children": [
+      "input",
+      "tone",
+      "noise"
+    ],
+    "attributes": [
+      {
+        "name": "rate",
+        "type": "integer"
+      },
+      {
+        "name": "loop",
+        "type": "boolean"
+      },
+      {
+        "name": "normalize",
+        "type": "boolean"
+      }
+    ],
+    "block": "output"
+  },
+  {
+    "name": "input",
+    "parent": "audio",
+    "attributes": [
+
+    ],
+    "block": "output"
+  },
+  {
+    "name": "tone",
+    "parent": "audio",
+    "children": [
+      "input"
+    ],
+    "attributes": [
+      {
+        "name": "waveform",
+        "type": "enum",
+        "values": [
+          "sine",
+          "square",
+          "sawtooth"
+        ]
+      }
+    ],
+    "block": "output"
+  },
+  {
+    "name": "input",
+    "parent": "tone",
+    "attributes": [
+      {
+        "name": "parameter",
+        "type": "enum",
+        "values": [
+          "pan",
+          "amplitude",
+          "duration",
+          "frequency"
+        ]
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [
+          "buffer",
+          "value"
+        ]
+      }
+    ],
+    "block": "output"
+  },
+  {
+    "name": "noise",
+    "parent": "audio",
+    "children": [
+      "input"
+    ],
+    "attributes": [
+
+    ],
+    "block": "output"
+  },
+  {
+    "name": "input",
+    "parent": "noise",
+    "attributes": [
+      {
+        "name": "parameter",
+        "type": "enum",
+        "values": [
+          "pan",
+          "amplitude",
+          "duration"
+        ]
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [
+          "buffer",
+          "value"
+        ]
+      }
+    ],
+    "block": "output"
+  },
+  {
+    "name": "flashlight",
+    "parent": "output",
+    "children": [
+      "input"
+    ],
+    "attributes": [
+
+    ],
+    "block": "output"
+  },
+  {
+    "name": "input",
+    "parent": "flashlight",
+    "attributes": [
+      {
+        "name": "parameter",
+        "type": "enum",
+        "required": true,
+        "values": [
+          "intensity",
+          "frequency",
+          "dutycycle"
+        ]
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [
+          "buffer",
+          "value"
+        ]
+      }
+    ],
+    "block": "output"
+  },
+  {
+    "name": "bluetooth",
+    "parent": "output",
+    "children": [
+      "input",
+      "config"
+    ],
+    "attributes": [
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "uuid",
+        "type": "string"
+      },
+      {
+        "name": "autoConnect",
+        "type": "boolean"
+      },
+      {
+        "name": "address",
+        "type": "string"
+      },
+      {
+        "name": "mtu",
+        "type": "integer"
+      }
+    ],
+    "block": "output"
+  },
+  {
+    "name": "input",
+    "parent": "bluetooth",
+    "attributes": [
+      {
+        "name": "char",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "conversion",
+        "type": "enum",
+        "values": [
+          "uInt8",
+          "int8",
+          "uInt16LittleEndian",
+          "uInt16BigEndian",
+          "int16LittleEndian",
+          "int16BigEndian",
+          "uInt24LittleEndian",
+          "uInt24BigEndian",
+          "int24LittleEndian",
+          "int24BigEndian",
+          "uInt32LittleEndian",
+          "uInt32BigEndian",
+          "int32LittleEndian",
+          "int32BigEndian",
+          "float32LittleEndian",
+          "float32BigEndian",
+          "float64LittleEndian",
+          "float64BigEndian",
+          "singleByte",
+          "string",
+          "byteArray"
+        ],
+        "required": true
+      },
+      {
+        "name": "offset",
+        "type": "integer"
+      },
+      {
+        "name": "keep",
+        "type": "boolean"
+      },
+      {
+        "name": "triggerId",
+        "type": "string"
+      }
+    ],
+    "block": "output"
+  },
+  {
+    "name": "config",
+    "parent": "bluetooth",
+    "attributes": [
+      {
+        "name": "char",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "conversion",
+        "type": "enum",
+        "values": [
+          "uInt8",
+          "int8",
+          "uInt16LittleEndian",
+          "uInt16BigEndian",
+          "int16LittleEndian",
+          "int16BigEndian",
+          "uInt24LittleEndian",
+          "uInt24BigEndian",
+          "int24LittleEndian",
+          "int24BigEndian",
+          "uInt32LittleEndian",
+          "uInt32BigEndian",
+          "int32LittleEndian",
+          "int32BigEndian",
+          "float32LittleEndian",
+          "float32BigEndian",
+          "float64LittleEndian",
+          "float64BigEndian",
+          "singleByte",
+          "string",
+          "hexadecimal"
+        ],
+        "required": true
+      }
+    ],
+    "block": "output"
+  },
+  {
+    "name": "analysis",
+    "parent": "phyphox",
+    "children": [
+      "abs",
+      "acos",
+      "add",
+      "append",
+      "asin",
+      "atan",
+      "atan2",
+      "autocorrelation",
+      "average",
+      "binning",
+      "butterworth",
+      "const",
+      "cos",
+      "cosh",
+      "count",
+      "crosscorrelation",
+      "differentiate",
+      "divide",
+      "eventstream",
+      "fft",
+      "first",
+      "formula",
+      "gausssmooth",
+      "gcd",
+      "if",
+      "imagedecode",
+      "info",
+      "integrate",
+      "interpolate",
+      "lcm",
+      "loess",
+      "log",
+      "map",
+      "match",
+      "max",
+      "min",
+      "movingaverage",
+      "multiply",
+      "periodicity",
+      "power",
+      "ramp",
+      "rangefilter",
+      "reduce",
+      "round",
+      "sin",
+      "sinh",
+      "sort",
+      "split",
+      "subrange",
+      "subtract",
+      "tan",
+      "tanh",
+      "threshold",
+      "timer"
+    ],
+    "attributes": [
+      {
+        "name": "sleep",
+        "type": "float"
+      },
+      {
+        "name": "dynamicSleep",
+        "type": "string"
+      },
+      {
+        "name": "onUserInput",
+        "type": "boolean"
+      },
+      {
+        "name": "requireFill",
+        "type": "string"
+      },
+      {
+        "name": "requireFillThreshold",
+        "type": "integer"
+      },
+      {
+        "name": "requireFillDynamic",
+        "type": "string"
+      },
+      {
+        "name": "timedRun",
+        "type": "boolean"
+      },
+      {
+        "name": "timedRunStartDelay",
+        "type": "float"
+      },
+      {
+        "name": "timedRunStopDelay",
+        "type": "float"
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "abs",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "abs",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "acos",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "deg",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "acos",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "add",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "summand",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "allows_value": true,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "sum",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "append",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "allows_value": true,
+        "allows_empty": true,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "asin",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "deg",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "asin",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "atan",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "deg",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "atan",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "atan2",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "deg",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "y",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "x",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "atan2",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "autocorrelation",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "minX",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "maxX",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "average",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "buffer",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "average",
+        "as_required": false,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "stddev",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "binning",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "x0",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "dx",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "binStarts",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "name": "binCounts",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "butterworth",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "n",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "cutoff",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "cutoffLow",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "filtered",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "const",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "length",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "cos",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "deg",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "cos",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "cosh",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "cosh",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "count",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "buffer",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "count",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "crosscorrelation",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 2,
+        "max": 2,
+        "allows_value": false,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "differentiate",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "divide",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "dividend",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "divisor",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "allows_value": true,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "quotient",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "eventstream",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "mode",
+        "type": "enum",
+        "values": [
+          "above",
+          "below",
+          "aboveAbsolute",
+          "belowAbsolute",
+          "aboveDerivative",
+          "belowDerivative",
+          "aboveDerivativeAbsolute",
+          "belowDerivativeAbsolute"
+        ]
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "data",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "threshold",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "distance",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "index",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "skip",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "last",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "events",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "index",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "skip",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "last",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "fft",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "re",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "im",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "re",
+        "as_required": false,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "im",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "first",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "allows_value": false,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "first",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "repeat_offset": 0
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "formula",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "formula",
+        "type": "string"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 0,
+        "max": "unlimited",
+        "allows_value": false,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "gausssmooth",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "sigma",
+        "type": "float"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "gcd",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 2,
+        "max": 2,
+        "allows_value": true,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "gcd",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "if",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "equal",
+        "type": "boolean"
+      },
+      {
+        "name": "greater",
+        "type": "boolean"
+      },
+      {
+        "name": "less",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "a",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "b",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "true",
+        "as_required": false,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": true
+      },
+      {
+        "name": "false",
+        "as_required": false,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": true
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "imagedecode",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "width",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "height",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "r",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "g",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "b",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "a",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "luma",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "luminance",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "info",
+    "parent": "analysis",
+    "children": [
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "batteryLevel",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "wifiSignalStrength",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "systemVolume",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "batteryVoltage",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "batteryCurrent",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "batteryTemperature",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "integrate",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "interpolate",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "method",
+        "type": "enum",
+        "values": [
+          "nearest",
+          "previous",
+          "next",
+          "linear"
+        ]
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "xi",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "lcm",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 2,
+        "max": 2,
+        "allows_value": true,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "lcm",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "loess",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "d",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "xi",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "yi0",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "name": "yi1",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "yi2",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "log",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "log",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "map",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "zMode",
+        "type": "enum",
+        "values": [
+          "average",
+          "count",
+          "sum"
+        ]
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "mapWidth",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "minX",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "maxX",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "mapHeight",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "minY",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "maxY",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "z",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "name": "z",
+        "as_required": true,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "match",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "allows_value": false,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "repeat_offset": 0
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "max",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "multiple",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "threshold",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "max",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "position",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "min",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "multiple",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "threshold",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "min",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "position",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "movingaverage",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "dropIncomplete",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "data",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "width",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "data",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "multiply",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "factor",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "allows_value": true,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "product",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "periodicity",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "dx",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "overlap",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "min",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "max",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "time",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "period",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "power",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "base",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "exponent",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "power",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "ramp",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "start",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "stop",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "length",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "rangefilter",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "allows_value": false,
+        "allows_empty": false,
+        "repeat_offset": 0
+      },
+      {
+        "name": "min",
+        "as_required": true,
+        "min": 0,
+        "max": "unlimited",
+        "allows_value": true,
+        "allows_empty": false,
+        "repeat_offset": 1
+      },
+      {
+        "name": "max",
+        "as_required": true,
+        "min": 0,
+        "max": "unlimited",
+        "allows_value": true,
+        "allows_empty": false,
+        "repeat_offset": 2
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "repeat_offset": 0
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "reduce",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "averageX",
+        "type": "boolean"
+      },
+      {
+        "name": "averageY",
+        "type": "boolean"
+      },
+      {
+        "name": "sumY",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "factor",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "round",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "ceil",
+        "type": "boolean"
+      },
+      {
+        "name": "floor",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "round",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "sin",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "deg",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "sin",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "sinh",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "sinh",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "sort",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "descending",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "allows_value": false,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "repeat_offset": 0
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "split",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "data",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "index",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "overlap",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out1",
+        "as_required": false,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "out2",
+        "as_required": false,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "subrange",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "from",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "to",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "length",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "in",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "allows_value": false,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "repeat_offset": 0
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "subtract",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "minuend",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      },
+      {
+        "name": "subtrahend",
+        "as_required": false,
+        "min": 1,
+        "max": "unlimited",
+        "allows_value": true,
+        "allows_empty": false,
+        "repeat_offset": 0
+      }
+    ],
+    "outputs": [
+      {
+        "name": "difference",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "tan",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "deg",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "tan",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "tanh",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "value",
+        "as_required": false,
+        "min": 1,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "tanh",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "threshold",
+    "parent": "analysis",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "falling",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "x",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "y",
+        "as_required": true,
+        "min": 1,
+        "max": 1,
+        "allows_value": false,
+        "allows_empty": false
+      },
+      {
+        "name": "threshold",
+        "as_required": true,
+        "min": 0,
+        "max": 1,
+        "allows_value": true,
+        "allows_empty": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "position",
+        "as_required": false,
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "timer",
+    "parent": "analysis",
+    "children": [
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "linearTime",
+        "type": "boolean"
+      },
+      {
+        "name": "cycles",
+        "type": "string"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "out",
+        "as_required": false,
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "offset1970",
+        "as_required": true,
+        "min": 0,
+        "max": 1
+      }
+    ],
+    "block": "analysis"
+  },
+  {
+    "name": "input",
+    "parent": "@analysis-module",
+    "attributes": [
+      {
+        "name": "as",
+        "type": "string"
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [
+          "buffer",
+          "value",
+          "empty"
+        ]
+      },
+      {
+        "name": "keep",
+        "type": "boolean"
+      },
+      {
+        "name": "clear",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "output",
+    "parent": "@analysis-module",
+    "attributes": [
+      {
+        "name": "as",
+        "type": "string"
+      },
+      {
+        "name": "append",
+        "type": "boolean"
+      },
+      {
+        "name": "clear",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "views",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "children": [
+      "view"
+    ],
+    "block": "views"
+  },
+  {
+    "name": "view",
+    "parent": "views",
+    "children": [
+      "info",
+      "separator",
+      "value",
+      "graph",
+      "edit",
+      "button",
+      "toggle",
+      "slider",
+      "dropdown",
+      "image",
+      "camera-gui",
+      "depth-gui"
+    ],
+    "attributes": [
+      {
+        "name": "label",
+        "type": "string"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "info",
+    "parent": "view",
+    "attributes": [
+      {
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "name": "color",
+        "type": "color"
+      },
+      {
+        "name": "size",
+        "type": "float"
+      },
+      {
+        "name": "align",
+        "type": "enum",
+        "values": [
+          "left",
+          "right",
+          "center"
+        ]
+      },
+      {
+        "name": "bold",
+        "type": "boolean"
+      },
+      {
+        "name": "italic",
+        "type": "boolean"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "separator",
+    "parent": "view",
+    "attributes": [
+      {
+        "name": "height",
+        "type": "float"
+      },
+      {
+        "name": "color",
+        "type": "color"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "value",
+    "parent": "view",
+    "children": [
+      "input",
+      "map"
+    ],
+    "attributes": [
+      {
+        "name": "color",
+        "type": "color"
+      },
+      {
+        "name": "size",
+        "type": "float"
+      },
+      {
+        "name": "precision",
+        "type": "integer"
+      },
+      {
+        "name": "scientific",
+        "type": "boolean"
+      },
+      {
+        "name": "unit",
+        "type": "string"
+      },
+      {
+        "name": "factor",
+        "type": "float"
+      },
+      {
+        "name": "positiveUnit",
+        "type": "string"
+      },
+      {
+        "name": "negativeUnit",
+        "type": "string"
+      },
+      {
+        "name": "format",
+        "type": "enum",
+        "values": [
+          "float",
+          "degree-minutes",
+          "degree-minutes-seconds",
+          "ascii"
+        ]
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "input",
+    "parent": "value",
+    "attributes": [
+
+    ],
+    "block": "views"
+  },
+  {
+    "name": "map",
+    "parent": "value",
+    "attributes": [
+      {
+        "name": "min",
+        "type": "float"
+      },
+      {
+        "name": "max",
+        "type": "float"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "graph",
+    "parent": "view",
+    "children": [
+      "input",
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "labelX",
+        "type": "string"
+      },
+      {
+        "name": "labelY",
+        "type": "string"
+      },
+      {
+        "name": "labelZ",
+        "type": "string"
+      },
+      {
+        "name": "unitX",
+        "type": "string"
+      },
+      {
+        "name": "unitY",
+        "type": "string"
+      },
+      {
+        "name": "unitZ",
+        "type": "string"
+      },
+      {
+        "name": "unitYperX",
+        "type": "string"
+      },
+      {
+        "name": "timeOnX",
+        "type": "boolean"
+      },
+      {
+        "name": "timeOnY",
+        "type": "boolean"
+      },
+      {
+        "name": "systemTime",
+        "type": "boolean"
+      },
+      {
+        "name": "linearTime",
+        "type": "boolean"
+      },
+      {
+        "name": "hideTimeMarkers",
+        "type": "boolean"
+      },
+      {
+        "name": "aspectRatio",
+        "type": "float"
+      },
+      {
+        "name": "style",
+        "type": "enum",
+        "values": [
+          "lines",
+          "dots",
+          "hbars",
+          "vbars",
+          "map"
+        ]
+      },
+      {
+        "name": "partialUpdate",
+        "type": "boolean"
+      },
+      {
+        "name": "history",
+        "type": "integer"
+      },
+      {
+        "name": "lineWidth",
+        "type": "float"
+      },
+      {
+        "name": "color",
+        "type": "color"
+      },
+      {
+        "name": "logX",
+        "type": "boolean"
+      },
+      {
+        "name": "logY",
+        "type": "boolean"
+      },
+      {
+        "name": "logZ",
+        "type": "boolean"
+      },
+      {
+        "name": "xPrecision",
+        "type": "integer"
+      },
+      {
+        "name": "yPrecision",
+        "type": "integer"
+      },
+      {
+        "name": "zPrecision",
+        "type": "integer"
+      },
+      {
+        "name": "suppressScientificNotation",
+        "type": "boolean"
+      },
+      {
+        "name": "scaleMinX",
+        "type": "enum",
+        "values": [
+          "auto",
+          "extend",
+          "fixed"
+        ]
+      },
+      {
+        "name": "scaleMaxX",
+        "type": "enum",
+        "values": [
+          "auto",
+          "extend",
+          "fixed"
+        ]
+      },
+      {
+        "name": "scaleMinY",
+        "type": "enum",
+        "values": [
+          "auto",
+          "extend",
+          "fixed"
+        ]
+      },
+      {
+        "name": "scaleMaxY",
+        "type": "enum",
+        "values": [
+          "auto",
+          "extend",
+          "fixed"
+        ]
+      },
+      {
+        "name": "scaleMinZ",
+        "type": "enum",
+        "values": [
+          "auto",
+          "extend",
+          "fixed"
+        ]
+      },
+      {
+        "name": "scaleMaxZ",
+        "type": "enum",
+        "values": [
+          "auto",
+          "extend",
+          "fixed"
+        ]
+      },
+      {
+        "name": "minX",
+        "type": "float"
+      },
+      {
+        "name": "maxX",
+        "type": "float"
+      },
+      {
+        "name": "minY",
+        "type": "float"
+      },
+      {
+        "name": "maxY",
+        "type": "float"
+      },
+      {
+        "name": "minZ",
+        "type": "float"
+      },
+      {
+        "name": "maxZ",
+        "type": "float"
+      },
+      {
+        "name": "followX",
+        "type": "boolean"
+      },
+      {
+        "name": "mapWidth",
+        "type": "integer"
+      },
+      {
+        "name": "showColorScale",
+        "type": "boolean"
+      },
+      {
+        "name": "mapColor[N]",
+        "type": "color"
+      },
+      {
+        "name": "interpolateMapColors",
+        "type": "boolean"
+      },
+      {
+        "name": "pickLabel",
+        "type": "string"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "input",
+    "parent": "graph",
+    "attributes": [
+      {
+        "name": "axis",
+        "type": "enum",
+        "required": true,
+        "values": [
+          "x",
+          "y",
+          "z"
+        ]
+      },
+      {
+        "name": "color",
+        "type": "color"
+      },
+      {
+        "name": "lineWidth",
+        "type": "float"
+      },
+      {
+        "name": "style",
+        "type": "enum",
+        "values": [
+          "lines",
+          "dots",
+          "hbars",
+          "vbars",
+          "map"
+        ]
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "output",
+    "parent": "graph",
+    "attributes": [
+      {
+        "name": "axis",
+        "type": "enum",
+        "required": true,
+        "values": [
+          "x",
+          "xcal",
+          "y",
+          "ycal",
+          "z",
+          "zcal"
+        ]
+      },
+      {
+        "name": "label",
+        "type": "string"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "edit",
+    "parent": "view",
+    "children": [
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "signed",
+        "type": "boolean"
+      },
+      {
+        "name": "decimal",
+        "type": "boolean"
+      },
+      {
+        "name": "min",
+        "type": "float"
+      },
+      {
+        "name": "max",
+        "type": "float"
+      },
+      {
+        "name": "unit",
+        "type": "string"
+      },
+      {
+        "name": "factor",
+        "type": "float"
+      },
+      {
+        "name": "default",
+        "type": "float"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "output",
+    "parent": "edit",
+    "attributes": [
+
+    ],
+    "block": "views"
+  },
+  {
+    "name": "button",
+    "parent": "view",
+    "children": [
+      "input",
+      "output",
+      "map",
+      "trigger"
+    ],
+    "attributes": [
+      {
+        "name": "dynamicLabel",
+        "type": "string"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "input",
+    "parent": "button",
+    "attributes": [
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [
+          "buffer",
+          "value",
+          "empty"
+        ]
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "output",
+    "parent": "button",
+    "attributes": [
+
+    ],
+    "block": "views"
+  },
+  {
+    "name": "map",
+    "parent": "button",
+    "attributes": [
+      {
+        "name": "min",
+        "type": "float"
+      },
+      {
+        "name": "max",
+        "type": "float"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "trigger",
+    "parent": "button",
+    "attributes": [
+
+    ],
+    "block": "views"
+  },
+  {
+    "name": "toggle",
+    "parent": "view",
+    "children": [
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "default",
+        "type": "float"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "output",
+    "parent": "toggle",
+    "attributes": [
+
+    ],
+    "block": "views"
+  },
+  {
+    "name": "slider",
+    "parent": "view",
+    "children": [
+      "output"
+    ],
+    "attributes": [
+      {
+        "name": "minValue",
+        "type": "float"
+      },
+      {
+        "name": "maxValue",
+        "type": "float"
+      },
+      {
+        "name": "stepSize",
+        "type": "float"
+      },
+      {
+        "name": "default",
+        "type": "float"
+      },
+      {
+        "name": "precision",
+        "type": "integer"
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [
+          "normal",
+          "range"
+        ]
+      },
+      {
+        "name": "showValue",
+        "type": "boolean"
+      },
+      {
+        "name": "color",
+        "type": "color"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "output",
+    "parent": "slider",
+    "attributes": [
+      {
+        "name": "value",
+        "type": "enum",
+        "values": [
+          "lowerValue",
+          "upperValue"
+        ]
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "dropdown",
+    "parent": "view",
+    "children": [
+      "output",
+      "map"
+    ],
+    "attributes": [
+      {
+        "name": "default",
+        "type": "float"
+      },
+      {
+        "name": "color",
+        "type": "color"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "output",
+    "parent": "dropdown",
+    "attributes": [
+
+    ],
+    "block": "views"
+  },
+  {
+    "name": "map",
+    "parent": "dropdown",
+    "attributes": [
+      {
+        "name": "value",
+        "type": "float"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "image",
+    "parent": "view",
+    "attributes": [
+      {
+        "name": "src",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "scale",
+        "type": "float"
+      },
+      {
+        "name": "darkFilter",
+        "type": "enum",
+        "values": [
+          "none",
+          "invert"
+        ]
+      },
+      {
+        "name": "lightFilter",
+        "type": "enum",
+        "values": [
+          "none",
+          "invert"
+        ]
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "camera-gui",
+    "parent": "view",
+    "attributes": [
+      {
+        "name": "exposure_adjustment_level",
+        "type": "integer"
+      },
+      {
+        "name": "grayscale",
+        "type": "boolean"
+      },
+      {
+        "name": "markOverexposure",
+        "type": "color"
+      },
+      {
+        "name": "markUnderexposure",
+        "type": "color"
+      },
+      {
+        "name": "show_controls",
+        "type": "enum",
+        "values": [
+          "always",
+          "full_view_only",
+          "never"
+        ]
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "depth-gui",
+    "parent": "view",
+    "attributes": [
+      {
+        "name": "aspectRatio",
+        "type": "float"
+      }
+    ],
+    "block": "views"
+  },
+  {
+    "name": "network",
+    "parent": "phyphox",
+    "attributes": [
+
+    ],
+    "children": [
+      "connection"
+    ],
+    "block": "network"
+  },
+  {
+    "name": "connection",
+    "parent": "network",
+    "children": [
+      "send",
+      "receive"
+    ],
+    "attributes": [
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "privacy",
+        "type": "string"
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "service",
+        "type": "enum",
+        "values": [
+          "http/get",
+          "http/post",
+          "mqtt/csv",
+          "mqtt/json",
+          "mqtts/csv",
+          "mqtts/json"
+        ]
+      },
+      {
+        "name": "conversion",
+        "type": "enum",
+        "values": [
+          "none",
+          "csv",
+          "json"
+        ]
+      },
+      {
+        "name": "discovery",
+        "type": "enum",
+        "values": [
+          "http"
+        ]
+      },
+      {
+        "name": "discoveryAddress",
+        "type": "string"
+      },
+      {
+        "name": "autoConnect",
+        "type": "boolean"
+      },
+      {
+        "name": "interval",
+        "type": "float"
+      },
+      {
+        "name": "receiveTopic",
+        "type": "string"
+      },
+      {
+        "name": "sendTopic",
+        "type": "string"
+      },
+      {
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "name": "password",
+        "type": "string"
+      },
+      {
+        "name": "persistence",
+        "type": "boolean"
+      },
+      {
+        "name": "certificate",
+        "type": "string"
+      }
+    ],
+    "block": "network"
+  },
+  {
+    "name": "send",
+    "parent": "connection",
+    "attributes": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "type",
+        "type": "enum",
+        "values": [
+          "buffer",
+          "meta",
+          "time"
+        ]
+      },
+      {
+        "name": "datatype",
+        "type": "enum",
+        "values": [
+          "number",
+          "array"
+        ]
+      },
+      {
+        "name": "keep",
+        "type": "boolean"
+      },
+      {
+        "name": "clear",
+        "type": "boolean"
+      }
+    ],
+    "block": "network"
+  },
+  {
+    "name": "receive",
+    "parent": "connection",
+    "attributes": [
+      {
+        "name": "id",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "append",
+        "type": "boolean"
+      },
+      {
+        "name": "clear",
+        "type": "boolean"
+      }
+    ],
+    "block": "network"
+  }
+]

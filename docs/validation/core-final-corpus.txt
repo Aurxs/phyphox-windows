@@ -1,0 +1,1 @@
+﻿Corpus parse audit (not execution/hardware): loaded=127, rejected=39, newer-format-skipped=1, expectation-mismatches=0
