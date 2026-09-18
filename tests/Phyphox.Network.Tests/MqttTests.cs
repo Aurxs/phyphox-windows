@@ -50,7 +50,7 @@ internal static class MqttTests
             var result=await Batch(adapter);Check(result?.Writes.Single().Values.SequenceEqual([5d])==true,"MQTT interval-zero receive-only stays subscribed and recovers after bad payload");
         }
         await server.StopAsync();
-        // Ephemeral CA and server key stay in memory; no global trust store changes.
+        // Generate a short-lived fixture CA; never add it to the system trust store.
         using var rootKey=RSA.Create(2048);var rootRequest=new CertificateRequest("CN=phyphox fixture CA",rootKey,HashAlgorithmName.SHA256,RSASignaturePadding.Pkcs1);
         rootRequest.CertificateExtensions.Add(new X509BasicConstraintsExtension(true,false,0,true));rootRequest.CertificateExtensions.Add(new X509KeyUsageExtension(X509KeyUsageFlags.KeyCertSign|X509KeyUsageFlags.CrlSign,true));
         using var root=rootRequest.CreateSelfSigned(DateTimeOffset.UtcNow.AddMinutes(-5),DateTimeOffset.UtcNow.AddDays(1));
@@ -58,7 +58,13 @@ internal static class MqttTests
         leafRequest.CertificateExtensions.Add(new X509BasicConstraintsExtension(false,false,0,true));leafRequest.CertificateExtensions.Add(new X509KeyUsageExtension(X509KeyUsageFlags.DigitalSignature|X509KeyUsageFlags.KeyEncipherment,true));
         leafRequest.CertificateExtensions.Add(new X509EnhancedKeyUsageExtension(new OidCollection { new("1.3.6.1.5.5.7.3.1") },true));
         var san=new SubjectAlternativeNameBuilder();san.AddDnsName("localhost");leafRequest.CertificateExtensions.Add(san.Build());
-        using var signed=leafRequest.Create(root,DateTimeOffset.UtcNow.AddMinutes(-1),DateTimeOffset.UtcNow.AddHours(1),RandomNumberGenerator.GetBytes(16));using var leaf=signed.CopyWithPrivateKey(serverKey);
+        using var signed=leafRequest.Create(root,DateTimeOffset.UtcNow.AddMinutes(-1),DateTimeOffset.UtcNow.AddHours(1),RandomNumberGenerator.GetBytes(16));
+        using var ephemeralLeaf=signed.CopyWithPrivateKey(serverKey);
+        // Windows Schannel cannot use an ephemeral RSA key for the TLS server.
+        // A PFX import creates a user key container, removed when leaf is disposed
+        // (do not use PersistKeySet). Other platforms keep the key ephemeral.
+        using var leaf=X509CertificateLoader.LoadPkcs12(ephemeralLeaf.Export(X509ContentType.Pkcs12),null,
+            OperatingSystem.IsWindows()?X509KeyStorageFlags.UserKeySet:X509KeyStorageFlags.EphemeralKeySet);
         var tlsPort=Port();using var tlsServer=factory.CreateMqttServer(new MqttServerOptionsBuilder().WithoutDefaultEndpoint().WithEncryptedEndpoint().WithEncryptedEndpointPort(tlsPort).WithEncryptedEndpointBoundIPAddress(IPAddress.Loopback).WithEncryptedEndpointBoundIPV6Address(IPAddress.IPv6Loopback).WithEncryptionCertificate(leaf).Build());
         tlsServer.ValidatingConnectionAsync+=e=> { if(e.UserName!="fixture"||e.Password!="fixture-pass")e.ReasonCode=MqttConnectReasonCode.BadUserNameOrPassword;return Task.CompletedTask; };
         await tlsServer.StartAsync();
@@ -66,7 +72,9 @@ internal static class MqttTests
         foreach(var mode in new[]{"json","csv"})
         {
             using var adapter=new NetworkCoordinator(Tls("localhost",mode),_=>[12.5],resource:_=>root.RawData){RequestTimeout=TimeSpan.FromSeconds(2)};
-            adapter.Start();var result=await Batch(adapter,3000);Check(result?.Writes.Single().Values.SequenceEqual([12.5])==true,$"MQTTS {mode} custom-CA verified roundtrip");
+            adapter.Start();var result=await Batch(adapter,3000);
+            if(result is null)Console.Error.WriteLine($"MQTTS {mode} connection error: {adapter.Status[0].Error ?? "no response"}");
+            Check(result?.Writes.Single().Values.SequenceEqual([12.5])==true,$"MQTTS {mode} custom-CA verified roundtrip");
         }
         foreach(var scenario in new[]{"untrusted","hostname","credentials"})
         {

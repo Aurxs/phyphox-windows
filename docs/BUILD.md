@@ -9,6 +9,18 @@
 
 ## Windows构建机
 
+安装 SDK 和 Node.js 后，可双击项目根目录的 `build-exe.cmd`，或运行：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\build-exe.ps1
+# 可指定 ZIP 路径；相对路径以项目根目录为基准。
+powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\build-exe.ps1 -Output "artifacts/my-build.zip"
+```
+
+默认生成 `artifacts/phyphox-windows-win-x64.zip` 和 `.zip.sha256`。脚本在独立临时目录构建前端并发布自包含 EXE，检查必要文件后压缩，随后清理临时目录；不会把旧发布目录中的测量数据打进包。重复执行会替换同名 ZIP 和校验文件。ZIP 内是完整便携程序文件夹，不是安装器或单文件 EXE。
+
+GitHub 上使用 **Actions → Build Windows EXE → Run workflow** 手动打包；推送 `v*` 标签也会触发。工作流读取 `global.json` 安装 SDK，调用同一本地脚本，上传 ZIP 和校验文件到该次运行的 Artifacts（保留 30 天）。下载的 Artifact 外层 ZIP 解压后，需再解压其中的程序 ZIP。此流程只做构建及包内容检查；现有 `Windows portable verification` 工作流继续承担服务验证，不会自动创建 Release。
+
 安装SDK和Node后，在项目根执行：
 
 ```powershell

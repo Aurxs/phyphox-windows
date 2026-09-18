@@ -61,13 +61,16 @@
 
 ## 源码与构建
 
+### 一键打包 EXE
+
+- **GitHub Actions**：将代码推送到 GitHub 后，打开 **Actions → Build Windows EXE → Run workflow**。完成后在该次运行的 **Artifacts** 下载 `phyphox-windows-win-x64`，解压下载文件，再解压其中的便携包 ZIP。推送 `v*` 标签也会自动打包；产物保留 30 天，不自动发布 Release。
+- **Windows 本地**：安装下面指定的 .NET SDK 和 Node.js 后，双击项目根目录的 `build-exe.cmd`；也可在 PowerShell 执行 `powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\build-exe.ps1`。
+
+本地输出为 `artifacts/phyphox-windows-win-x64.zip` 和同名 `.sha256` 校验文件。解压完整 ZIP 后双击 `start-phyphox.cmd`，其中的 `Phyphox.Server.exe` 即 Windows 程序，无需另外安装 .NET。必须保留配套文件，不能只复制 EXE。打包需要联网下载构建依赖。
+
 工具链固定于 `global.json` 的 .NET SDK 10.0.401；前端使用 Node.js 22 与 `web/package-lock.json`。Windows 发布目标为 x64，Windows API 基线 build 19041。当前 Windows ARM VM 验证使用 x64 仿真包，并未交付原生 ARM64 包；Windows 10 实机仍需验证。
 
 ```powershell
-cd web
-npm ci
-npm run build
-cd ..
 .\tools\publish-windows.ps1
 ```
 
