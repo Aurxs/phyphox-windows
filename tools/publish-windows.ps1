@@ -1,4 +1,4 @@
-param([string]$Output = "artifacts/win-x64", [switch]$SkipWebBuild)
+﻿param([string]$Output = "artifacts/win-x64", [switch]$SkipWebBuild)
 $ErrorActionPreference = 'Stop'
 Push-Location (Split-Path $PSScriptRoot -Parent)
 try {

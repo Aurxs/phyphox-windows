@@ -29,7 +29,7 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
       - name: Build portable EXE package
-        shell: pwsh
+        shell: powershell
         run: ./tools/build-exe.ps1
       - name: Upload portable package and checksum
         uses: actions/upload-artifact@v4
