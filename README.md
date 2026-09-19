@@ -2,28 +2,32 @@
 
 浏览器提供界面及麦克风、摄像头、扬声器入口；本地服务负责实验计算、存储和 BLE、USB 通信。
 
-这是依据 phyphox 官方 Android 1.2.1 源码开发的 Windows 移植版，当前为**开发验证版**，不代表完整产品或设备兼容性已验收。使用者在终端启动本地服务，再用浏览器操作；不依赖手机、账号或云服务。
+这是依据 phyphox 官方 Android 1.2.1 源码开发的 Windows 移植版，当前为**开发验证版**，不代表完整产品或设备兼容性已验收。双击 EXE 启动本地服务并自动打开浏览器；不依赖手机、账号或云服务。
 
 [使用指南 PDF](user-guide/phyphox-Windows-使用指南.pdf) · [构建说明](docs/BUILD.md) · [兼容清单](docs/COMPATIBILITY.md)
 
 ## 运行便携包
 
-1. 解压完整便携程序文件夹（内含 `start-phyphox.cmd` 和 EXE）到电脑或可写 U 盘，不要只复制 EXE。
-2. 双击 `start-phyphox.cmd`，或在终端执行 `Phyphox.Server.exe`。
-3. 浏览器打开终端显示的 `http://127.0.0.1:端口`。端口默认自动分配。
+1. 解压完整便携程序文件夹（内含 `phyphox.exe` 和 `app/`）到电脑或可写 U 盘，不要只复制 EXE。
+2. 双击 `phyphox.exe`，任务栏会出现“phyphox 实验工作台”后端窗口，不显示命令行窗口。
+3. 服务就绪后自动打开默认浏览器，地址为 `http://127.0.0.1:端口`，端口默认自动分配。后端窗口可最小化，并提供“打开实验页面”按钮和可复制的地址。
 4. 在“实验库”点击“试试公式实验”，或搜索“公式计算工作台”，先熟悉输入与结果。官方硬件实验必须连接、配置对应设备才能运行。
-5. 完成后停止实验，在终端按 Ctrl+C 关闭服务，再安全拔出 U 盘。
+5. 关闭浏览器后服务仍运行。完成后点击后端窗口的“停止服务并退出”或关闭该窗口，服务会停止并释放数据目录，再安全拔出 U 盘。
 
 程序随包携带 .NET 10 运行时，不要求用户安装 .NET/SDK/Node，不安装系统服务、启动项或文件关联。需要电脑已有浏览器及相应设备驱动。网页资源均在包内，不使用 CDN。实验主动声明的 HTTP/MQTT 功能当然需要其指定的网络连接。
 
-默认数据目录为 EXE 所在目录下的 `data/`，按相对位置查找资源，可以改变文件夹名称和盘符。U 盘只读、空间不足或被安全策略禁止执行时不能保证运行。USB 专用驱动的安装要求取决于具体设备，程序“免安装”不等于任意设备免驱动。
+默认数据目录为根目录 `phyphox.exe` 旁的 `data/`，按相对位置查找资源，可以改变文件夹名称和盘符。U 盘只读、空间不足或被安全策略禁止执行时不能保证运行。USB 专用驱动的安装要求取决于具体设备，程序“免安装”不等于任意设备免驱动。
 
 ```powershell
-.\Phyphox.Server.exe --port 37650
-.\Phyphox.Server.exe --data-dir "D:\我的实验数据"
+.\phyphox.exe --port 37650
+.\phyphox.exe --data-dir "D:\我的实验数据"
+# 自动化验证可禁用窗口及浏览器；仅禁用自动打开浏览器可用 --no-browser。
+.\phyphox.exe --headless --port 37650
 ```
 
 默认仅监听本机。浏览器显示界面，并在用户明确授权后提供麦克风、普通相机及扬声器的媒体入口；采集得到的真实音频和图像交给服务分析和保存，播放内容由服务生成。BLE、串口、HID、网络通信、实验引擎与文件保存仍在本地服务执行，没有 Web Bluetooth/WebUSB/Web Serial 依赖。浏览器媒体需要 localhost 或 HTTPS、安全上下文及相应浏览器支持。
+
+解压后的根目录只有 `phyphox.exe`、`app/`、`开始使用.txt` 和可选的使用指南 PDF；运行后会新增 `data/`。程序依赖集中在 `app/`，无需进入查找入口。更新请解压到新文件夹，停止旧程序后复制原来的 `data/`，不要覆盖旧版程序目录。
 
 ## 页面入口与日常操作
 
@@ -55,19 +59,22 @@
 | `data/recordings` | `.active` 未封口记录、`.jsonl` 已封口记录 |
 | `data/snapshots` | 具名暂停数据快照 |
 | `data/imports` | 原始导入数据和映射回执 |
-| `assets` | 固定版本官方实验及数值样例 |
+| `app/assets` | 固定版本官方实验及数值样例 |
 
 回放是记录数据的重新计算，关闭硬件输出，也不替换当前实时会话。数据快照不是驱动/引擎内存检查点，恢复后需重新确认设备绑定。保存到原版 `.phyphox` 的是数据与时间状态，不承诺所有 Android 状态都能逐位互通。浏览器自身缓存与 Windows 系统日志可能保留，本项目不承诺宿主零痕迹。
 
 ## 源码与构建
 
+### 一键打包 EXE
+
+- **GitHub Actions**：将代码推送到 GitHub 后，打开 **Actions → Build Windows EXE → Run workflow**。完成后在该次运行的 **Artifacts** 下载 `phyphox-windows-win-x64`，解压下载文件，再解压其中的便携包 ZIP。推送 `v*` 标签也会自动打包；产物保留 30 天，不自动发布 Release。
+- **Windows 本地**：安装下面指定的 .NET SDK 和 Node.js 后，双击项目根目录的 `build-exe.cmd`；也可在 PowerShell 执行 `powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\build-exe.ps1`。
+
+本地输出为 `artifacts/phyphox-windows-win-x64.zip` 和同名 `.sha256` 校验文件。解压完整 ZIP 后双击 `phyphox.exe`，无需另外安装 .NET。必须保留配套文件，不能只复制 EXE。打包需要联网下载构建依赖。
+
 工具链固定于 `global.json` 的 .NET SDK 10.0.401；前端使用 Node.js 22 与 `web/package-lock.json`。Windows 发布目标为 x64，Windows API 基线 build 19041。当前 Windows ARM VM 验证使用 x64 仿真包，并未交付原生 ARM64 包；Windows 10 实机仍需验证。
 
 ```powershell
-cd web
-npm ci
-npm run build
-cd ..
 .\tools\publish-windows.ps1
 ```
 
