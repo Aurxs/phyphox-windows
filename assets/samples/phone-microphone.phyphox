@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phyphox version="1.20" locale="zh-CN">
+  <title>手机麦克风</title><category>手机传感器</category>
+  <description>通过设置中的手机传感器连接手机浏览器，启用麦克风并绑定此实验。开始后显示真实 PCM 音频波形；幅度未经过声压标定。</description>
+  <data-containers><container size="4096">audio</container><container size="1">rate</container></data-containers>
+  <input><audio append="true"><output>audio</output><output component="rate">rate</output></audio></input>
+  <views><view label="声音波形"><info label="先在设置 → 手机传感器中连接、授权并绑定，再开始实验。横轴为采样点，幅度为未标定 PCM。"/><graph label="麦克风波形" labelX="采样点" labelY="PCM 幅度"><input axis="y">audio</input></graph><value label="实际采样率" unit="Hz" precision="0"><input>rate</input></value></view></views>
+  <export><set name="Microphone"><data name="PCM">audio</data><data name="Sample rate (Hz)">rate</data></set></export>
+</phyphox>

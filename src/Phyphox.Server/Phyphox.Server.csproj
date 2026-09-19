@@ -19,6 +19,7 @@
     <ProjectReference Include="../Phyphox.Camera/Phyphox.Camera.csproj" />
     <ProjectReference Include="../Phyphox.Network/Phyphox.Network.csproj" />
     <ProjectReference Include="../Phyphox.Storage/Phyphox.Storage.csproj" />
+    <ProjectReference Include="../Phyphox.Pairing/Phyphox.Pairing.csproj" />
     <ProjectReference Include="../Phyphox.Devices.Windows/Phyphox.Devices.Windows.csproj" Condition="$([System.String]::Copy('$(RuntimeIdentifier)').StartsWith('win-'))" />
   </ItemGroup>
   <ItemGroup>

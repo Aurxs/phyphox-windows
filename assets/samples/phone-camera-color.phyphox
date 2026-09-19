@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phyphox version="1.20" locale="zh-CN">
+  <title>手机相机颜色</title><category>手机传感器</category>
+  <description>连接手机浏览器并授权摄像头，观察画面中央区域的色相、饱和度和相对亮度。仅分析普通图像颜色，不提供照度、曝光或其他标定物理测量。</description>
+  <data-containers><container size="2000">t</container><container size="2000">hue</container><container size="2000">saturation</container><container size="2000">value</container></data-containers>
+  <input><camera feature="photometric" x1="0.4" x2="0.6" y1="0.4" y2="0.6"><output component="t">t</output><output component="hue">hue</output><output component="saturation">saturation</output><output component="value">value</output></camera></input>
+  <views><view label="中央区域颜色"><info label="先连接并绑定手机摄像头。将物体置于手机画面中央；相机自动曝光会影响相对亮度。"/><graph label="色相变化" labelX="时间" unitX="s" labelY="色相" unitY="°"><input axis="x">t</input><input axis="y">hue</input></graph><graph label="饱和度与亮度" labelX="时间" unitX="s" labelY="相对值"><input axis="x">t</input><input axis="y">saturation</input><input axis="x">t</input><input axis="y">value</input></graph></view></views>
+  <export><set name="Camera color"><data name="Time (s)">t</data><data name="Hue (degrees)">hue</data><data name="Saturation">saturation</data><data name="Value">value</data></set></export>
+</phyphox>

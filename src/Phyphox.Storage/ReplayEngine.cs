@@ -25,6 +25,7 @@ public sealed record ReplayEvent
     public double? LinearTime { get; init; }
     public double? Offset1970 { get; init; }
     public double? LinearOffset1970 { get; init; }
+    public Dictionary<string, string>? SourceMetadata { get; init; }
     public Dictionary<string, double>? Info { get; init; }
 }
 

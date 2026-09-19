@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phyphox version="1.20" locale="zh-CN">
+  <title>手机运动</title><category>手机传感器</category>
+  <description>连接手机浏览器并启用运动传感器，显示含重力的三轴加速度。使用浏览器实际默认采样速率，保持手机页面在前台。</description>
+  <data-containers><container size="4000">t</container><container size="4000">x</container><container size="4000">y</container><container size="4000">z</container></data-containers>
+  <input><sensor type="accelerometer"><output component="t">t</output><output component="x">x</output><output component="y">y</output><output component="z">z</output></sensor></input>
+  <views><view label="三轴加速度"><info label="先连接手机、授权运动传感器并绑定。数据包含重力；静置时某一轴通常接近重力加速度。"/><graph label="运动曲线" labelX="时间" unitX="s" labelY="加速度" unitY="m/s²"><input axis="x">t</input><input axis="y">x</input><input axis="x">t</input><input axis="y">y</input><input axis="x">t</input><input axis="y">z</input></graph></view></views>
+  <export><set name="Acceleration"><data name="Time (s)">t</data><data name="X (m/s2)">x</data><data name="Y (m/s2)">y</data><data name="Z (m/s2)">z</data></set></export>
+</phyphox>

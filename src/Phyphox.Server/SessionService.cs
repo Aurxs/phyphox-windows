@@ -180,15 +180,18 @@ public sealed partial class SessionService : BackgroundService
                         if (runtime.State == "running")
                             break;
                         RecordCommand(new("start"));
+                        RotatePhoneRun();
                         runtime.Start();
                         break;
                     case "pause":
+                        if(runtime.State=="running")FlushBrowserMedia(false);
                         try
                         {
                             RecordCommand(new("pause"));
                         }
                         finally
                         {
+                            RotatePhoneRun();
                             runtime.Pause();
                         }
 
@@ -336,6 +339,7 @@ public sealed partial class SessionService : BackgroundService
         lock (gate)
         {
             journalHealthy = false;
+            InvalidatePhoneInputs();
             runtime?.Stop();
             error = message;
             revision++;
@@ -405,12 +409,14 @@ public sealed partial class SessionService : BackgroundService
         if (runtime.Definition.Analysis.Any(m => m.Name.LocalName == "info"))
             issues.Add("此实验需要真实系统信息提供器，当前会话未配置 info 数据来源。");
         for (var i = 0; i < runtime.Definition.Inputs.Count; i++)
-            if (runtime.Definition.Inputs[i].Name.LocalName is not ("audio" or "camera" or "bluetooth") && !bindings.Any(b => b.Definition.InputIndex == i && devices.IsConnected(b.Definition.ConnectionId)))
+            if (runtime.Definition.Inputs[i].Name.LocalName is not ("audio" or "camera" or "bluetooth") && !PhoneInputReady(i) && !bindings.Any(b => b.Definition.InputIndex == i && devices.IsConnected(b.Definition.ConnectionId)))
                 issues.Add($"需要{GetInputDisplayName(runtime.Definition.Inputs[i])}，当前尚未接入。");
         foreach (var binding in bindings.Where(b => !devices.IsConnected(b.Definition.ConnectionId)))
             issues.Add($"设备连接 {binding.Definition.ConnectionId} 不可用。");
         foreach (var output in runtime.Definition.Outputs.Where(o => o.Name.LocalName is not ("audio" or "bluetooth")))
             issues.Add($"输出 {output.Name.LocalName} 尚未完成实验设备绑定。");
+        if(browserCaptures.Values.Any(c=>c.Configuration.Source=="phone"&&(!c.HasData||Stopwatch.GetElapsedTime(c.LastReceived).TotalSeconds>5)))
+            issues.Add("手机媒体尚未收到真实数据或已超时，请检查手机权限与连接。");
         issues.AddRange(media.CapabilityIssues(NativeMediaDefinition(runtime.Definition)));
         issues.AddRange(outputs.CapabilityIssues(runtime.Definition));
         issues.AddRange(bleInputs.CapabilityIssues(runtime.Definition, GenericBoundInputs()));
@@ -465,6 +471,8 @@ public sealed partial class SessionService : BackgroundService
             network = network?.Status,
             networkDiagnostics = networkDiagnostics.ToArray(),
             droppedNetworkResponses = network?.DroppedResponses ?? 0,
+            phoneRunId,
+            phoneMotion = PhoneMotionSnapshot(),
             browserMedia = BrowserMediaSnapshot(),
             browserAudioOutput = BrowserAudioOutputSnapshot(),
             inputBindings = bindings.Select(b => b.Definition),
@@ -771,6 +779,10 @@ public sealed partial class SessionService : BackgroundService
         {
             if (runtime is null || runtime.State == "running" || starting)
                 throw new InvalidOperationException("请加载实验并停止采集后配置输入映射。");
+            if (browserCaptures.Values.Any(c => c.Configuration.InputIndex == binding.InputIndex || c.Input.Elements().Any(e => binding.Mappings.Any(m => m.Buffer == e.Value.Trim()) || binding.TimeBuffer == e.Value.Trim())))
+                throw new InvalidOperationException("输入已有浏览器来源，不能重复写入采样。");
+            if (phoneCaptures.Values.Any(c => c.Configuration.InputIndex == binding.InputIndex || c.Input.Elements().Any(e => binding.Mappings.Any(m => m.Buffer == e.Value.Trim()) || binding.TimeBuffer == e.Value.Trim())))
+                throw new InvalidOperationException("输入已有手机绑定，不能重复写入采样。");
             if (bleInputs.Bindings.Any(b => b.ConnectionId == binding.ConnectionId || b.InputIndex == binding.InputIndex))
                 throw new InvalidOperationException("该设备或输入已有原版 BLE 绑定，不能重复写入采样。");
             if (!devices.IsConnected(binding.ConnectionId))
@@ -993,6 +1005,7 @@ public sealed partial class SessionService : BackgroundService
                         bleInputs.Flush(data => IngestMedia(data, false));
                         media.FlushInputs();
                         FlushBrowserMedia();
+                        CheckPhoneFreshness();
                         UpdateBrowserAudioOutputLocked();
                         if (RunAndRecord(true))
                         {
@@ -1010,6 +1023,7 @@ public sealed partial class SessionService : BackgroundService
                     catch (Exception ex)
                     {
                         journalHealthy = false;
+                        InvalidatePhoneInputs();
                         runtime.Stop();
                         error = ex.Message;
                         revision++;

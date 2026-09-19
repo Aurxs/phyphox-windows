@@ -57,13 +57,17 @@ public static class Program
         var session = new SessionService(library, dataRoot, deviceManager);
         builder.Services.AddSingleton(library); builder.Services.AddSingleton(session); builder.Services.AddHostedService(_ => session);
         builder.Services.AddSingleton(deviceManager);
+        builder.Services.AddSingleton(_ => new PhoneLocalGateway(dataRoot, Path.Combine(AppContext.BaseDirectory, "wwwroot")));
+        builder.Services.AddSingleton<PhoneBridgeLease>();
+        builder.Services.AddHostedService(provider => provider.GetRequiredService<PhoneBridgeLease>());
         await using var app = builder.Build();
+        app.UseWebSockets();
         var token = Convert.ToHexString(RandomNumberGenerator.GetBytes(32));
         app.Use(async (context, next) =>
         {
             context.Response.Headers["X-Content-Type-Options"] = "nosniff";
             context.Response.Headers["Referrer-Policy"] = "no-referrer";
-            context.Response.Headers["Content-Security-Policy"] = "default-src 'self'; img-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'";
+            context.Response.Headers["Content-Security-Policy"] = "default-src 'self'; img-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' ws://127.0.0.1:* ws://localhost:*; frame-ancestors 'none'; base-uri 'self'";
             try
             {
                 var host = context.Request.Host.Host;
@@ -79,6 +83,14 @@ public static class Program
                     { context.Response.StatusCode = 401; await context.Response.WriteAsJsonAsync(new { error = "请重新打开本机实验页面。" }); return; }
                     if (context.Request.Method is "POST" or "DELETE" && context.Request.Headers["X-Phyphox-Client"] != "browser")
                     { context.Response.StatusCode = 403; await context.Response.WriteAsJsonAsync(new { error = "缺少本地操作标识。" }); return; }
+                    if (context.Request.Path.StartsWithSegments("/api/v1/session/phone"))
+                    {
+                        using var deadline = CancellationTokenSource.CreateLinkedTokenSource(context.RequestAborted);
+                        deadline.CancelAfter(TimeSpan.FromSeconds(3));
+                        context.RequestAborted = deadline.Token;
+                        await app.Services.GetRequiredService<PhoneBridgeLease>().RunOwned(context.Request.Headers["X-Phyphox-Phone-Lease"].ToString(), () => next(), deadline.Token);
+                        return;
+                    }
                 }
                 await next();
             }
@@ -124,6 +136,9 @@ public static class Program
         app.MapMediaEndpoints();
         app.MapBrowserMediaEndpoints();
         app.MapBrowserAudioOutputEndpoints();
+        app.MapPhoneBridgeEndpoints();
+        app.MapPhoneMotionEndpoints();
+        app.MapPhoneLocalSignal();
         app.UseDefaultFiles(); app.UseStaticFiles();
         app.Map("/api/{**path}", () => Results.NotFound(new { error = "接口不存在。" }));
         app.MapFallbackToFile("index.html");

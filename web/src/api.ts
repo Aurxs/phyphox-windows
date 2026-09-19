@@ -8,8 +8,8 @@ export type Device = {id:string;name:string;kind:string};
 export type Devices = {items:Device[];connections?:{connectionId?:string;id?:string;status?:string;device?:Device}[];capabilities:{kind:string;status:string;reason:string}[]};
 let tokenPromise:Promise<string>|undefined;
 async function token(){return tokenPromise??=(fetch('/api/v1/bootstrap').then(async r=>{if(!r.ok)throw new Error('Bootstrap failed');return (await r.json()).token as string;}).catch(e=>{tokenPromise=undefined;throw e;}));}
-export async function request<T>(path:string, body?:unknown):Promise<T>{
- const headers:Record<string,string>={'X-Phyphox-Token':await token()};
+export async function request<T>(path:string, body?:unknown,extraHeaders:Record<string,string>={}):Promise<T>{
+ const headers:Record<string,string>={...extraHeaders,'X-Phyphox-Token':await token()};
  if(body!==undefined){headers['X-Phyphox-Client']='browser';headers['X-Phyphox-Token']=await token();if(!(body instanceof FormData))headers['Content-Type']='application/json';}
  const r=await fetch('/api/v1/'+path,{method:body===undefined?'GET':'POST',headers,body:body===undefined?undefined:body instanceof FormData?body:JSON.stringify(body)});
  if(!r.ok){if(r.status===401||r.status===403)tokenPromise=undefined;const e=await r.json().catch(()=>({error:r.statusText}));throw Object.assign(new Error(e.error||r.statusText),{status:r.status});}

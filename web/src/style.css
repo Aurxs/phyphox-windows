@@ -14,7 +14,14 @@ body{margin:0;font-size:14px}button,input,select,textarea{font:inherit}button,.b
 :root .search-field input[type=search]{border:0;background:transparent;padding:10px 0}
 
 /* Let real desktop windows use their available width; small windows retain stacked controls. */
-html,body,#root{min-height:100%;width:100%;min-width:0}
+html,body,#root{height:100%;width:100%;min-width:0;overflow:hidden}
+#root{height:100vh;height:100dvh;display:flex;flex-direction:column}
+.app-header{flex-shrink:0}
+.layout{flex:1;min-height:0;grid-template-rows:minmax(0,1fr);overflow:hidden}
+.app-sidebar{height:100%;min-height:0;overflow:clip}
+.app-sidebar>*{flex-shrink:0}
+.layout>main{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+@media(max-width:850px){.layout{grid-template-rows:auto minmax(0,1fr)}.app-sidebar{height:auto}}
 @media(min-width:1201px){
  .view-elements[data-graph-count]:not([data-graph-count="0"]):not([data-graph-count="1"])>.graph-panel{grid-column:auto}
  .view-elements[data-graph-count="3"]>.graph-panel:last-child{grid-column:1/-1}
