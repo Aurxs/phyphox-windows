@@ -42,7 +42,12 @@ token = json.loads(call('/api/v1/bootstrap')[1])['token']
 items = data('/api/v1/library')['items']
 official = [x for x in items if x['source'] == 'official']
 assert len(official) == 67, len(official)
-sample = next(x for x in items if x['source'] == 'sample')
+# LibraryService ID for formula-workbench.phyphox; independent of catalog order/title.
+formula_id = 'sample-84281042995114bb0660'
+samples = [x for x in items if x['source'] == 'sample' and x['id'] == formula_id]
+assert len(samples) == 1, f'Expected exactly one formula-workbench.phyphox sample ({formula_id}); found {len(samples)}'
+sample = samples[0]
+assert not sample['loadError'], sample['loadError']
 snapshot = data('/api/v1/session/load', {'id': sample['id']})
 assert snapshot['buffers']['square'] == [4], snapshot
 snapshot = data('/api/v1/session/commands', {'command': 'set', 'buffer': 'x', 'values': [3], 'requestId': 'check-set-3'})

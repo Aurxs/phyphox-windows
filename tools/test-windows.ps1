@@ -1,5 +1,6 @@
 param([Parameter(Mandatory=$true)][string]$ProgramDirectory, [int]$Port = 37653, [string]$ReportPath = "", [switch]$UsePortableData)
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'verification-fixtures.ps1')
 $ProgramDirectory = (Resolve-Path $ProgramDirectory).Path
 $runDirectory = Join-Path $env:TEMP ('phyphox-check-' + [Guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path $runDirectory | Out-Null
@@ -42,9 +43,10 @@ try {
   function ApiPost($path, $body) { Invoke-RestMethod "$url/api/v1/$path" -Headers $headers -Method Post -ContentType 'application/json; charset=utf-8' -Body ($body | ConvertTo-Json -Depth 20 -Compress) }
   $library = Invoke-RestMethod "$url/api/v1/library" -Headers $headers
   if (@($library.items | Where-Object source -eq 'official').Count -ne 67) { throw 'Official asset count changed.' }
-  $sample = $library.items | Where-Object source -eq 'sample' | Select-Object -First 1
+  $sample = Get-FormulaVerificationSample -Items $library.items
+  $report.formulaSampleId = $sample.id
   $snapshot = ApiPost 'session/load' @{id=$sample.id}
-  if ($snapshot.buffers.square[0] -ne 4) { throw 'Initial formula result differs.' }
+  if ($null -eq $snapshot.buffers.square -or @($snapshot.buffers.square).Count -ne 1 -or $snapshot.buffers.square[0] -ne 4) { throw 'Initial formula result differs: expected square=[4].' }
   $snapshot = ApiPost 'session/commands' @{command='set';buffer='x';values=@(3);requestId='windows-check-3'}
   if ($snapshot.buffers.square[0] -ne 9) { throw 'Formula calculation differs.' }
   $snapshot = ApiPost 'session/commands' @{command='start'}
