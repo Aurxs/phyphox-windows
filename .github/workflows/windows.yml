@@ -50,11 +50,14 @@ jobs:
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
           dotnet run --project tests/Phyphox.BleInput.Tests -- official-reference/phyphox-docs
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Portable fixture selection regression
+        shell: pwsh
+        run: ./tests/verification-fixtures.ps1
       - name: Publish and run portable service
         shell: pwsh
         run: |
           ./tools/publish-windows.ps1 -SkipWebBuild
-          ./tools/test-windows.ps1 -ProgramDirectory artifacts/win-x64 -ReportPath artifacts/windows-server-validation.json
+          ./artifacts/win-x64/app/test-windows.ps1 -ProgramDirectory artifacts/win-x64 -ReportPath artifacts/windows-server-validation.json
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
           ./tools/test-desktop.ps1 -ProgramDirectory artifacts/win-x64
       - uses: actions/upload-artifact@v4

@@ -16,7 +16,7 @@ try {
   dotnet publish src/Phyphox.Server/Phyphox.Server.csproj -c Release -r win-x64 --self-contained true -p:RuntimeIdentifier=win-x64 -p:UseSharedCompilation=false "-p:PortableLauncherPath=$launcher" -m:1 -o $program
   if ($LASTEXITCODE) { throw 'Windows publish failed' }
   Get-ChildItem $program -Recurse -Filter 'opencv_videoio_ffmpeg*.dll' | Remove-Item
-  Copy-Item tools/test-windows.ps1, LICENSE -Destination $program
+  Copy-Item tools/test-windows.ps1, tools/verification-fixtures.ps1, LICENSE -Destination $program
   if (Test-Path THIRD-PARTY-NOTICES.md) { Copy-Item THIRD-PARTY-NOTICES.md -Destination $program }
   Copy-Item docs -Destination $program -Recurse -Force
   if (Test-Path README.md) { Copy-Item README.md -Destination $program }
